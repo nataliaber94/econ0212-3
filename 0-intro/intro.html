@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="intro_files/libs/clipboard/clipboard.min.js"></script>
+<script src="intro_files/libs/quarto-html/tabby.min.js"></script>
+<script src="intro_files/libs/quarto-html/popper.min.js"></script>
+<script src="intro_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="intro_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="intro_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="intro_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Natalia Bermúdez">
+  <title>Introduction générale</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="intro_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="intro_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="intro_files/libs/revealjs/dist/theme/quarto-001521b87c396735529e41e5ab1732e7.css">
+  <link href="intro_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="intro_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="intro_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="intro_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="intro_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="intro_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Introduction générale</h1>
+  <p class="subtitle">Économétrie (ECON0212)</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Natalia Bermúdez 
+</div>
+        <p class="quarto-title-affiliation">
+            HEC Liège
+          </p>
+    </div>
+</div>
+
+  <p class="date">August 2026</p>
+</section>
+<section id="vue-densemble" class="slide level2">
+<h2>Vue d’ensemble</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img/content/mindmap-econometrie.png" class="quarto-figure quarto-figure-center" style="width:78.0%"></p>
+</figure>
+</div>
+</section>
+<section id="bienvenue-dans-ce-cours-déconométrie-appliquée" class="slide level2">
+<h2>Bienvenue dans ce cours d’économétrie <em>appliquée</em> !</h2>
+<h3 id="quest-ce-que-léconométrie">Qu’est-ce que l’<em>économétrie</em> ?</h3>
+<ul>
+<li>La branche de l’économie qui développe et utilise des <strong>méthodes statistiques</strong> pour estimer des <strong>relations économiques</strong></li>
+</ul>
+<h3 id="économétrie-appliquée">Économétrie <em>appliquée</em> ?</h3>
+<ul>
+<li>On <strong>applique</strong> la théorie économique pour comprendre le fonctionnement de l’économie
+<ul>
+<li>On utilise des <em>données</em> pour répondre à des questions posées par la théorie économique</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>Dans ce cours, l’objectif n’est pas seulement de vous introduire à la théorie de l’économétrie, mais aussi de vous montrer comment ces outils sont appliqués en pratique. Le cours combine deux approches :</p>
+<ul>
+<li><strong>Théorie</strong> : comprendre les modèles, les hypothèses et le raisonnement derrière les méthodes économétriques.</li>
+<li><strong>Pratique</strong> : travailler sur des exemples, des exercices et des applications pour voir comment la théorie fonctionne avec des données réelles.</li>
+</ul>
+<p>Votre participation compte. N’hésitez pas à poser des questions — pour éclaircir une étape, remettre en cause une hypothèse ou partager une idée. Les meilleures discussions viennent souvent de vos questions.</p>
+<p>Venez avec curiosité et envie d’interagir : en posant des questions pendant les cours, en partageant vos réflexions lors des activités, ou en soulevant des problématiques qui vous interpellent.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="introduction" class="title-slide slide level1 section-divider center scrollable">
+<h1>Introduction</h1>
+<ol type="1">
+<li><span class="current">Qu’est-ce que l’économétrie ?</span></li>
+<li>Données</li>
+<li>Stata</li>
+<li>Objectifs, plan de cours, références</li>
+</ol>
+</section>
+
+<section id="objectifs-de-lanalyse-économétrique" class="slide level2">
+<h2>Objectifs de l’analyse économétrique</h2>
+<ul>
+<li><strong>Estimer</strong> des relations entre des variables
+<ul>
+<li>Explorer la prévalence et l’importance des phénomènes sociaux</li>
+</ul></li>
+<li><strong>Tester</strong> des théories et hypothèses économiques
+<ul>
+<li>Comprendre les conséquences des politiques publiques</li>
+<li>Quantifier les paramètres économiques d’intérêt</li>
+</ul></li>
+<li>Faire des <strong>prévisions</strong> économiques</li>
+</ul>
+</section>
+<section id="les-étapes-de-lanalyse-économétrique" class="slide level2 smaller">
+<h2>Les étapes de l’analyse économétrique</h2>
+<h3 id="spécifier-un-modèle-économique-puis-un-modèle-économétrique">1. Spécifier un modèle économique, puis un modèle économétrique</h3>
+<ul>
+<li><strong>Modèle économique</strong> : la théorie économique qui sous-tend les relations entre variables
+<ul>
+<li>Établit une relation théorique entre des variables
+<ul>
+<li>Ex : offre/demande, équilibre économique</li>
+</ul></li>
+</ul></li>
+<li><strong>Modèle économétrique</strong> : la relation fonctionnelle entre les variables du modèle économique
+<ul>
+<li>L’analyse économétrique permet de <strong>quantifier</strong> et de <strong>tester</strong> ces relations</li>
+</ul></li>
+</ul>
+<h3 id="collecter-les-données-nécessaires">2. Collecter les données nécessaires</h3>
+<h3 id="implémenter-le-modèle-à-partir-des-données">3. Implémenter le modèle à partir des données</h3>
+<ul>
+<li>On utilise un logiciel de statistiques et d’économétrie : <code>Stata</code></li>
+</ul>
+</section>
+<section id="quels-sont-les-domaines-dapplication" class="slide level2">
+<h2>Quels sont les domaines d’application ?</h2>
+<p>L’économétrie appliquée est davantage un <strong>cadre</strong>, une <strong>approche</strong>, qu’un sujet particulier.</p>
+<h3 id="quelques-domaines-actifs">Quelques domaines actifs :</h3>
+<div class="center">
+<p><img data-src="wordcloud_domains.png" class="img-large" style="width:120.0%"></p>
+</div>
+</section>
+<section id="léconométrie-répond-à-des-questions-importantes" class="slide level2 smaller">
+<h2>L’économétrie répond à des questions importantes</h2>
+<div class="fragment quote-block">
+<p><a href="http://davidcard.berkeley.edu/papers/mariel-impact.pdf">L’immigration <em>entraîne-t-elle</em> une baisse des salaires et/ou un chômage plus élevé pour les locaux ?</a></p>
+</div>
+<div class="fragment quote-block">
+<p><a href="http://davidcard.berkeley.edu/papers/njmin-aer.pdf">L’augmentation du salaire minimum <em>réduit-elle</em> l’emploi des travailleurs peu qualifiés ?</a></p>
+</div>
+<div class="fragment quote-block">
+<p><a href="https://davidcard.berkeley.edu/papers/causal_educ_earnings.pdf">Une année d’études supplémentaire <strong>cause-t-elle</strong> un salaire plus élevé ?</a></p>
+</div>
+<div class="fragment quote-block">
+<p><a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/aer.115.6.1709">Pourquoi certains pays sont-ils riches et d’autres pauvres — est-ce <strong>causé</strong> par la qualité de leurs institutions ?</a></p>
+</div>
+<div class="fragment quote-block">
+<p><a href="https://academic.oup.com/qje/article/133/3/1107/4850660">Le quartier dans lequel vous avez grandi a-t-il un <em>impact</em> sur votre vie ?</a></p>
+</div>
+<div class="fragment quote-block">
+<p><a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20180120">Réduire la taille des classes <strong>améliore-t-il</strong> vraiment les résultats scolaires ?</a></p>
+</div>
+<aside class="notes">
+<ul>
+<li><p><em>The Impact of the Mariel Boatlift on the Miami Labor Market</em> : les immigrants de Mariel ont augmenté la main-d’œuvre de Miami de 7 % (principalement des immigrants non qualifiés). L’afflux de Mariel semble néanmoins n’avoir eu aucun effet sur les salaires ou les taux de chômage des travailleurs moins qualifiés, même parmi les Cubains ayant immigré plus tôt.</p></li>
+<li><p>Salaire minimum et emploi peu qualifié : théorie du marché du travail vs.&nbsp;augmentation du salaire minimum au New Jersey. Étude des fast-foods à la frontière New Jersey–Pennsylvanie : l’augmentation ne réduit pas l’emploi.</p></li>
+<li><p>Angrist &amp; Krueger utilisent le <strong>trimestre de naissance</strong> comme instrument : les lois sur la scolarité obligatoire fixent un âge de sortie, donc les élèves nés au début de l’année finissent l’école obligatoire avec légèrement moins d’années de scolarité que ceux nés en fin d’année — une variation <em>quasi aléatoire</em> de la scolarité, non corrélée à la capacité.</p></li>
+<li><p>Acemoglu, Johnson &amp; Robinson utilisent la <strong>mortalité des colons européens</strong> comme instrument des institutions actuelles : là où les colons mouraient beaucoup (climat, maladies), ils mettaient en place des institutions extractives plutôt que des institutions protégeant les droits de propriété — un exemple classique d’IV en macro/développement.</p></li>
+<li><p>Angrist &amp; Lavy exploitent la <strong>règle de Maïmonide</strong> (limite légale de 40 élèves par classe en Israël) : une classe de 41 élèves est scindée en deux classes de ~20, créant des discontinuités quasi expérimentales dans la taille de classe — l’exemple canonique de <em>regression discontinuity design</em> (RDD).</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="causalité" class="slide level2">
+<h2>Causalité</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li><p>De nombreux <strong>autres facteurs pourraient avoir causé</strong> chacun des résultats mentionnés</p></li>
+<li><p>On cherche à isoler l’<strong>impact causal</strong> d’un seul de ces facteurs (immigration, salaire minimum, éducation, etc.)</p></li>
+<li><p>Exemple : effet de l’éducation sur les salaires</p>
+<ul>
+<li><span class="math inline">\(X_1\)</span> = genre</li>
+<li><span class="math inline">\(X_2\)</span> = niveau d’éducation</li>
+<li><span class="math inline">\(Y\)</span> = salaire</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="dag.png" style="width:95.0%"></p>
+</div></div>
+<div class="alert">
+<p>L’économétrie consiste à expliciter les conditions dans lesquelles on peut affirmer mesurer des relations causales.</p>
+</div>
+<aside class="notes">
+<p>Nous étudierons les conditions les plus fondamentales et discuterons de certains écueils potentiels.</p>
+<p><a href="https://www.aeaweb.org/articles?id=10.1257/jep.24.2.3">“Révolution de la crédibilité”</a> en économétrie au cours des 30 dernières années — le prix Nobel d’économie 2022 a été décerné à certains des principaux protagonistes de cette révolution.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="dans-les-médias" class="slide level2 scrollable">
+<h2>Dans les médias</h2>
+<div class="center">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="tweet-covid-death.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>Quelle est la conclusion suggérée par ce tweet ? Quel est l’argument sous-jacent ?</li>
+<li>Pourquoi peut-on douter du raisonnement menant à cette conclusion ?</li>
+</ul>
+</div>
+<div class="fragment center">
+<h3 id="corrélation-causalité"><span class="alert">Corrélation ≠ Causalité</span></h3>
+</div>
+<aside class="notes">
+<ul>
+<li>Effet suggéré via une causalité implicite : Medicare serait la cause du décès. L’argument repose sur une association positive (corrélation) entre l’affiliation à Medicare et le décès par COVID-19.</li>
+<li>Raisonnement fallacieux :
+<ol type="1">
+<li><strong>Biais de sélection</strong> : l’échantillon limité aux décès sur-représente les personnes âgées, donc les assurés Medicare, et ne reflète pas la relation dans la population globale.</li>
+<li><strong>Variable omise</strong> : l’âge (ou l’état de santé) n’est pas inclus dans l’analyse, ce qui attribue à tort à Medicare une part de l’effet réel.</li>
+</ol></li>
+<li><strong>Effet de composition</strong> : les personnes âgées (≥ 65 ans) sont à la fois plus susceptibles d’être inscrites à Medicare et plus vulnérables aux formes graves de COVID-19.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="des-faits-à-la-causalité" class="slide level2 smaller">
+<h2>Des faits à la causalité</h2>
+<div class="columns">
+<div class="column" style="width:75%;">
+<div class="center">
+<p><img data-src="earnings_edu_2022.png" style="width:90.0%"></p>
+<p><small><em>Source : Statbel (2022). Salaires mensuels bruts moyens des travailleurs à temps plein en Belgique.</em></small></p>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="fragment">
+<ul>
+<li>Que peut-on conclure de cette figure ?
+<ul>
+<li>Peut-on conclure qu’obtenir un diplôme plus élevé <strong><em>cause</em></strong> la différence de salaire ?</li>
+</ul></li>
+<li>Qu’est-ce qui pourrait expliquer cette différence, à part le diplôme ?</li>
+</ul>
+</div>
+</div></div>
+<div class="fragment center">
+<h3 id="corrélation-causalité-1"><span class="alert">Corrélation ≠ Causalité</span></h3>
+</div>
+<aside class="notes">
+<ul>
+<li>Commencer uniquement par la figure et demander aux étudiants ce qu’ils observent.</li>
+<li>La conclusion descriptive est parfaitement valide : les personnes plus diplômées gagnent davantage en moyenne.</li>
+<li>Exemple : salaire moyen avec un master = 5 964 € contre 3 393 € avec un diplôme du secondaire supérieur.</li>
+<li>Demander ensuite : peut-on interpréter toute cette différence comme l’effet du diplôme ?</li>
+<li>Faire proposer aux étudiants des facteurs qui pourraient être liés à la fois au niveau d’éducation et au salaire : aptitudes, motivation, milieu familial, choix de profession, secteur, expérience, etc.</li>
+<li>Insister : cela ne signifie PAS que l’éducation n’a pas d’effet causal sur le salaire. Cela signifie simplement que cette figure ne permet pas, à elle seule, d’identifier cet effet.</li>
+<li>Transition : l’un des objectifs de l’économétrie sera précisément de distinguer les associations observées dans les données des effets causaux.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="introduction-1" class="title-slide slide level1 section-divider center scrollable" data-menu-title="Données">
+<h1>Introduction</h1>
+<ol type="1">
+<li>Qu’est-ce que l’économétrie ?</li>
+<li><span class="current">Données</span></li>
+<li>Stata</li>
+<li>Objectifs, plan de cours, références</li>
+</ol>
+</section>
+
+<section id="types-de-données" class="slide level2">
+<h2>Types de données</h2>
+<ul>
+<li>Données en coupe (<em>cross-sectional data</em>)</li>
+<li>Séries temporelles (<em>time series data</em>)</li>
+<li>Données de panel (<em>panel data</em>)</li>
+<li>Données en coupe répétées (<em>pooled cross sections</em>)</li>
+</ul>
+<h3 id="caractéristiques-principales">Caractéristiques principales</h3>
+<ul>
+<li>Quelle entité (individu, ménage) représente une observation ?</li>
+<li>Quelle est la population considérée et l’échantillon observé ?</li>
+<li>Quelle est la période temporelle ? L’ordre des données est-il important ?</li>
+</ul>
+</section>
+<section id="types-de-données-données-en-coupe-cross-section" class="slide level2">
+<h2>Types de données — données en coupe (<em>cross-section</em>)</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><p>Échantillon d’individus, de ménages, d’entreprises, de villes, de régions… observés à un moment donné</p></li>
+<li><p>Les observations sont relativement indépendantes les unes des autres</p>
+<ul>
+<li>Ex : échantillon aléatoire d’une population</li>
+</ul></li>
+<li><p>L’ordre des observations n’a pas d’importance</p></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><img data-src="../img/content/data-cross-section2.png" style="width:90.0%"></p>
+</div></div>
+</section>
+<section id="types-de-données-série-temporelle-time-series" class="slide level2">
+<h2>Types de données — série temporelle (<em>time series</em>)</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li>Observation d’une variable au cours du temps
+<ul>
+<li>Ex : produit intérieur brut, prix d’actions, indice d’inflation…</li>
+</ul></li>
+<li>Les observations d’une série temporelle sont typiquement corrélées au cours du temps
+<ul>
+<li>Tendances, saisonnalité</li>
+</ul></li>
+<li>L’ordre des observations <strong>a de l’importance</strong>: les événements passés peuvent influencer les événements futurs</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><img data-src="../img/content/data-time-series2.png" style="width:90.0%"></p>
+</div></div>
+</section>
+<section id="types-de-données-données-de-panel" class="slide level2">
+<h2>Types de données — données de panel</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><p>Les mêmes unités sont suivies au cours de plusieurs périodes</p></li>
+<li><p>Dimensions <strong>individuelle</strong> et <strong>temporelle</strong></p></li>
+<li><p>L’ordre des observations dans la dimension temporelle <strong>a de l’importance</strong></p></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><img data-src="../img/content/data-panel2.png" style="width:65.0%"></p>
+</div></div>
+</section>
+<section id="types-de-données-coupes-répétées-repeated-cross-section" class="slide level2">
+<h2>Types de données — coupes répétées (<em>repeated cross-section</em>)</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><p>Plusieurs échantillons en coupe observés à différentes périodes</p></li>
+<li><p>Les mêmes unités ne sont pas nécessairement suivies au cours du temps (C.-à-d., indépendantes)</p>
+<ul>
+<li>Contrairement aux données de panel</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><img data-src="../img/content/data-repeated-CS2.png" style="width:65.0%"></p>
+</div></div>
+</section>
+<section id="introduction-2" class="title-slide slide level1 section-divider center scrollable" data-menu-title="Stata">
+<h1>Introduction</h1>
+<ol type="1">
+<li>Qu’est-ce que l’économétrie ?</li>
+<li>Données</li>
+<li><span class="current">Stata</span></li>
+<li>Objectifs, plan de cours, références</li>
+</ol>
+</section>
+
+<section id="quest-ce-que-stata" class="slide level2 scrollable">
+<h2>Qu’est-ce que <code>Stata</code> ?</h2>
+<p><code>Stata</code> est un <strong>logiciel statistique et de programmation</strong> offrant de nombreuses possibilités en termes d’analyse statistique et graphique.</p>
+<div class="fragment">
+<h3 id="pourquoi-utilisons-nous-stata">Pourquoi utilisons-nous <code>Stata</code> ?</h3>
+</div>
+<ol type="1">
+<li class="fragment"><code>Stata</code> est <strong>flexible et puissant</strong> : utilisable pour de nombreuses tâches (nettoyage de données, visualisation, économétrie, analyse de données spatiales, machine learning, etc.)</li>
+<li class="fragment"><code>Stata</code> est <strong>facile d’utilisation</strong></li>
+<li class="fragment"><code>Stata</code> dispose d’une grande collection de modules spécialisés</li>
+<li class="fragment">C’est un bon investissement pour le mémoire de master</li>
+</ol>
+</section>
+<section id="pourquoi-ne-pas-simplement-utiliser-excel" class="slide level2">
+<h2>Pourquoi ne pas simplement utiliser Excel ?</h2>
+<p>De nombreuses raisons, en voici quelques-unes :</p>
+<ul>
+<li class="fragment">Pas <strong>reproductible</strong></li>
+<li class="fragment">Pas facile de <strong>fusionner</strong> des ensembles de données</li>
+<li class="fragment">Très fastidieux pour <strong>nettoyer</strong> les données</li>
+<li class="fragment">Limité à de <strong>petits ensembles de données</strong></li>
+<li class="fragment">Pas conçu pour de véritables <strong>analyses économétriques</strong>, cartes ou visualisations complexes</li>
+</ul>
+</section>
+<section id="introduction-3" class="title-slide slide level1 section-divider center scrollable" data-menu-title="Objectifs, plan de cours, références">
+<h1>Introduction</h1>
+<ol type="1">
+<li>Qu’est-ce que l’économétrie ?</li>
+<li>Données</li>
+<li>Stata</li>
+<li><span class="current">Objectifs, plan de cours, références</span></li>
+</ol>
+</section>
+
+<section id="pré-requis-objectifs" class="slide level2 smaller">
+<h2>Pré-requis — objectifs</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="précédemment">Précédemment</h3>
+<ul>
+<li>Statistiques
+<ul>
+<li>Utilisation de R</li>
+<li>Estimation ponctuelle et par intervalles de confiance</li>
+<li>Tests statistiques</li>
+</ul></li>
+<li>Économie
+<ul>
+<li>Offre et demande</li>
+<li>Élasticité</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h3 id="cette-année">Cette année</h3>
+<ul>
+<li>Modélisation de faits économiques</li>
+<li>Régression linéaire (simple et multiple)</li>
+<li>Concept de causalité</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h3 id="en-master-économie">En master (économie)</h3>
+<ul>
+<li>Prise en compte de la dimension temporelle</li>
+<li>Stratégies d’identification de la causalité</li>
+<li>Analyse de données avancée (<code>Python</code>)</li>
+</ul>
+</div></div>
+</section>
+<section id="objectifs-du-cours" class="slide level2 scrollable">
+<h2>Objectifs du cours</h2>
+<ol type="1">
+<li class="fragment">Vous donner les outils pour <strong>mener une analyse économétrique</strong>
+<ul>
+<li class="fragment">Régression linéaire, inférence statistique et évaluation d’impact</li>
+<li class="fragment">Prise en main de <code>Stata</code> — ce n’est pas un cours de <code>Stata</code></li>
+</ul></li>
+<li class="fragment">Développer votre <strong>regard critique</strong> sur les analyses statistiques
+<ul>
+<li class="fragment">Comprendre la distinction entre <strong>corrélation et causalité</strong></li>
+<li class="fragment">Apprendre à interpréter correctement les résultats économétriques</li>
+</ul></li>
+<li class="fragment">Vous préparer à votre <strong>formation en master</strong>
+<ul>
+<li class="fragment">Mémoire de master</li>
+<li class="fragment">Cours d’économie appliquée, de finance empirique, de machine learning…</li>
+</ul></li>
+</ol>
+</section>
+<section id="plan-de-cours" class="slide level2">
+<h2>Plan de cours</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 50%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Date</strong></th>
+<th style="text-align: left;"><strong>Lecture</strong></th>
+<th style="text-align: left;"><strong>Travaux pratiques</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">16-09</td>
+<td style="text-align: left;">0. Introduction</td>
+<td style="text-align: left;">1. Stata (intro)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16-09</td>
+<td style="text-align: left;">1. Analyse de données</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">23-09</td>
+<td style="text-align: left;">2. Régression linéaire simple (RLS)</td>
+<td style="text-align: left;">2. Stata (avancé)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">30-09</td>
+<td style="text-align: left;">3. Causalité</td>
+<td style="text-align: left;">3. RLS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">07-10</td>
+<td style="text-align: left;">4. Régression linéaire multiple (RLM)</td>
+<td style="text-align: left;">4. Causalité</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14-10</td>
+<td style="text-align: left;">5. Hypothèses du modèle de RLM*</td>
+<td style="text-align: left;">5. RLM</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">13-11 ***</td>
+<td style="text-align: left;">6. Régressions : extensions</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">18-11</td>
+<td style="text-align: left;">7. Inférence en régression</td>
+<td style="text-align: left;">6. Régressions: extensions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">25-11</td>
+<td style="text-align: left;">8. Différence-de-différences (DiD)</td>
+<td style="text-align: left;">7. Inférence</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">02-12</td>
+<td style="text-align: left;">Questions / réponses</td>
+<td style="text-align: left;">8. DiD</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">09-12</td>
+<td style="text-align: left;">Questions / réponses</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<div class="muted">
+<p>Note: Pas de cours le 21-10 et le 04-11. ***Cours le 13-11 (vendredi), salle à confirmer.</p>
+</div>
+</section>
+<section id="support-de-cours-et-ressources-utiles" class="slide level2">
+<h2>Support de cours et ressources utiles</h2>
+<h3 id="ouvrages-de-référence">Ouvrages de référence</h3>
+<ul>
+<li><a href="https://www.deboecksuperieur.com/ouvrage/9782807329775-introduction-l-econometrie"><em>Introduction à l’économétrie : une approche moderne</em> — <strong>Wooldridge</strong></a>
+<ul>
+<li>Manuel de référence du cours — disponible en français</li>
+</ul></li>
+<li><a href="https://www.pearson.com/en-us/subject-catalog/p/introduction-to-econometrics/P200000006450"><em>Introduction to Econometrics</em> — <strong>Stock &amp; Watson</strong></a>
+<ul>
+<li>Une autre excellente introduction à l’économétrie</li>
+</ul></li>
+</ul>
+</section>
+<section id="support-de-cours-et-ressources-utiles-1" class="slide level2">
+<h2>Support de cours et ressources utiles</h2>
+<h3 id="ressources-complémentaires">Ressources complémentaires</h3>
+<ul>
+<li><a href="https://www.masteringmetrics.com/"><em>Mastering Metrics</em> — <strong>Angrist &amp; Pischke</strong></a>
+<ul>
+<li>Une introduction intuitive à l’identification causale</li>
+</ul></li>
+<li><a href="https://scpoecon.github.io/ScPoEconometrics/"><em>Introduction to Econometrics with R</em> — <strong>Oswald et al.&nbsp;(Sciences Po)</strong></a>
+<ul>
+<li>Cours, exemples et applications avec <code>R</code></li>
+</ul></li>
+<li><a href="https://mixtape.scunning.com/"><em>Causal Inference: The Mixtape</em> — <strong>Scott Cunningham</strong></a>
+<ul>
+<li>Pour approfondir les méthodes d’évaluation causale</li>
+</ul></li>
+<li><a href="https://www.youtube.com/user/SpartacanUsuals">Ben Lambert — Econometrics</a>
+<ul>
+<li>Vidéos et explications intuitives</li>
+</ul></li>
+</ul>
+<div class="alert">
+<p><a href="../references.html">Liste des références organisées par chapitre</a></p>
+</div>
+</section>
+<section id="organisation" class="title-slide slide level1 section-divider center" data-menu-title="Organisation">
+<h1>Organisation</h1>
+
+</section>
+
+<section id="où-quand-comment" class="slide level2">
+<h2>Où, quand, comment ?</h2>
+<h3 id="cours">Cours</h3>
+<p>Mercredi 9h00 - 11h00 (salle xxx)</p>
+<h3 id="travaux-pratiques">Travaux pratiques</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Section</th>
+<th style="text-align: center;">Jour</th>
+<th style="text-align: center;">Horaire</th>
+<th style="text-align: center;">Salle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">SEG</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">IG</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<div class="muted">
+<p>Groupes et horaires définitifs communiqués sur lol@ après la fin des inscriptions.</p>
+</div>
+</section>
+<section id="équipe-enseignante" class="slide level2">
+<h2>Équipe enseignante</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Moniteur.rices</th>
+<th>Assistant·es</th>
+<th>Professeure</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Eva Markiewicz — <a href="mailto:eva.markiewicz@uliege.be">eva.markiewicz@uliege.be</a></td>
+<td>Natalia Bermúdez — <a href="mailto:natalia.bermudez@uliege.com">natalia.bermudez@uliege.be</a></td>
+</tr>
+<tr class="even">
+<td>→ TPs</td>
+<td>→ Communication, questions, TPs</td>
+<td>→ Cours, examen</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="supports-et-déroulement-du-cours" class="slide level2">
+<h2>Supports et déroulement du cours</h2>
+<h3 id="cours-8-chapitres-disponibles-sur-lol">Cours [8 chapitres disponibles sur lol@]</h3>
+<ul>
+<li><em>Slides</em> du cours :
+<ul>
+<li><strong><span class="alert">Concepts théoriques</span></strong></li>
+<li><strong><span class="alert">Applications pratiques</span></strong> utilisant le logiciel</li>
+<li>Un <strong>wooclap</strong> sur les concepts principaux (réalisé ensemble au début du cours d’après)</li>
+</ul></li>
+<li><em>Solutions</em> des applications pratiques</li>
+<li><em>Bases de données</em> utilisées dans le cours</li>
+<li>Pas de syllabus ? : pour chaque chapitre, voir les <a href="../references.html">références</a></li>
+</ul>
+</section>
+<section id="supports-et-déroulement-du-cours-1" class="slide level2">
+<h2>Supports et déroulement du cours</h2>
+<h3 id="travaux-pratiques-7-séances">Travaux pratiques (7 séances)</h3>
+<ul>
+<li>Exercices <strong><span class="alert">théoriques</span></strong> et <strong><span class="alert">pratiques</span></strong>.
+<ul>
+<li>Amenez votre ordinateur !</li>
+<li>/!\ Définition des <strong>groupes</strong> : communiqués sur lol@ après la fin des inscriptions</li>
+</ul></li>
+<li>Énoncés des exercices (et bases de données)</li>
+<li>Solutions des exercices</li>
+</ul>
+</section>
+<section id="supports-et-déroulement-du-cours-2" class="slide level2">
+<h2>Supports et déroulement du cours</h2>
+<h3 id="examens-passés">Examens passés</h3>
+<ul>
+<li>Énoncés, solutions, QCM pour s’entraîner</li>
+</ul>
+<h3 id="cheat-sheets">Cheat sheets</h3>
+<ul>
+<li><a href="https://www.stata.com/flyers/statacheatsheets.pdf">Liste des commandes Stata</a> — pas à connaître par cœur</li>
+</ul>
+</section>
+<section id="participation-en-cours" class="slide level2">
+<h2>Participation en cours</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h4 id="exercices">Exercices</h4>
+<p><img data-src="ex-exercice.png" style="width:90.0%"></p>
+<p>Pour mettre en pratique les commandes vues</p>
+</div><div class="column" style="width:33%;">
+<h4 id="questions">Questions</h4>
+<p><img data-src="ex-question.png" style="width:90.0%"></p>
+<p>Pour s’approprier les concepts</p>
+</div><div class="column" style="width:33%;">
+<h4 id="wooclap">Wooclap</h4>
+<p><img data-src="ex-wooclap.png" style="width:90.0%"></p>
+<p>Pour vérifier la compréhension des concepts théoriques clefs</p>
+</div></div>
+<div class="alert">
+<p>Amenez votre ordinateur, mais restez concentré·es !</p>
+</div>
+</section>
+<section id="évaluation" class="slide level2 smaller scrollable">
+<h2>Évaluation</h2>
+<ol type="1">
+<li class="fragment"><p><strong>Projet d’économétrie appliquée (Groupes de 3 étudiants)</strong> <em>(facultatif)</em></p>
+<ul>
+<li class="fragment"><p><strong>1 point bonus (sur 20)</strong>, valable pour les sessions de janvier et août</p></li>
+<li class="fragment"><p>À partir d’un <strong>article de recherche et de ses données</strong> :</p>
+<ul>
+<li class="fragment">réplication d’un résultat empirique</li>
+<li class="fragment">interprétation des résultats</li>
+<li class="fragment">analyse critique de l’approche économétrique</li>
+</ul></li>
+<li class="fragment"><p><strong>Remise</strong> : raport (3 page max) + code reproductible</p></li>
+<li class="fragment"><p><strong>Courte évaluation individuelle</strong> portant sur le projet (5–10 minute QCM lol@)</p></li>
+<li class="fragment"><p>Article, données et consignes communiqués en cours de semestre</p></li>
+</ul></li>
+<li class="fragment"><p><strong>Examen</strong> <em>(janvier et août)</em></p>
+<ul>
+<li class="fragment">Partie QCM pratique sur ordinateur</li>
+<li class="fragment">Partie théorique : questions ouvertes de connaissance et de compréhension du cours</li>
+</ul></li>
+</ol>
+</section>
+<section id="à-la-semaine-prochaine" class="slide level2 title-slide-final">
+<h2>À la semaine prochaine !</h2>
+<div class="closing-center">
+<p><span class="closing-label">Contact</span></p>
+<p><a href="mailto:natalia.bermudez@uclouvain.be">natalia.bermudez@uclouvain.be</a></p>
+<div class="muted">
+<p>Merci à <a href="mailto:florian.oswald@sciencespo.fr">Florian Oswald</a> et toute l’équipe de ScPoEconometrics pour leur <a href="https://scpoecon.github.io/ScPoEconometrics">livre</a> et leurs <a href="https://github.com/ScPoEcon/ScPoEconometrics-Slides">ressources</a>, ainsi que <strong>Malka Guillot</strong> pour avoir partagé les slides de ce cours.</p>
+</div>
+</div>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../img/logo/logo_hec.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="intro_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="intro_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="intro_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="intro_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="intro_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="intro_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="intro_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="intro_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="intro_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="intro_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="intro_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

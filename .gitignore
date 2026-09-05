@@ -1,0 +1,16 @@
+/.quarto/
+**/*.quarto_ipynb
+**/.DS_Store
+**/.Rhistory
+
+# Chapters not yet ready to publish
+/2-rls/
+/3-causalite/
+/4-rlm/
+/5-rlm-hypotheses/
+/6-rlm-extensions/
+/7-ci_hyptest/
+/8-did/
+
+# Personal working material / third-party course content, not for redistribution
+/extra_ressources/
