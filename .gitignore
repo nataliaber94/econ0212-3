@@ -14,3 +14,8 @@
 
 # Personal working material / third-party course content, not for redistribution
 /extra_ressources/
+
+# Exercise answer key and student version - not public for now
+/1-analyse-donnees/exercice/1-analyse-de-donnees.do
+/1-analyse-donnees/exercice/1-analyse-de-donnees_nb.do
+/1-analyse-donnees/exercice/*.stswp
