@@ -2,7 +2,7 @@
 
 Ressources pour le cours d'économétrie de bac 3 à HEC Liège.
 
-Site du cours : [bermudeznatalia.com/econ0212](https://bermudeznatalia.com/econ0212/)
+Site du cours : [bermudeznatalia.com/econ0212](https://bermudeznatalia.com/econ0212-3/)
 
 ## Index
 
