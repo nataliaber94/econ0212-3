@@ -3,6 +3,14 @@
 **/.DS_Store
 **/.Rhistory
 
+# Source files - kept private, only the rendered output is published here.
+# The full project (these included) lives in a separate private repo.
+**/*.qmd
+**/*.Rmd
+/_quarto.yml
+/css/quarto-hec.scss
+**/*_cache/
+
 # Chapters not yet ready to publish
 /2-rls/
 /3-causalite/
