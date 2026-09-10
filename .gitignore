@@ -3,8 +3,8 @@
 **/.DS_Store
 **/.Rhistory
 
-# Source files - kept private, only the rendered output is published here.
-# The full project (these included) lives in a separate private repo.
+# Slide/source files - never pushed. Only the rendered .html/.pdf is published.
+# These files stay on the local machine only; keep ~/Documents/econ0212 backed up.
 **/*.qmd
 **/*.Rmd
 /_quarto.yml
