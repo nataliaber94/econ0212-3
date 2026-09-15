@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="1-analyse-de-donnees_files/libs/revealjs/dist/theme/quarto-a28cc82d0f57636676cb34c98b4d0bf5.css">
+  <link rel="stylesheet" href="1-analyse-de-donnees_files/libs/revealjs/dist/theme/quarto-19745dda9f5001042433f4cece23b1f9.css">
   <link href="1-analyse-de-donnees_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="1-analyse-de-donnees_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="1-analyse-de-donnees_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -231,6 +231,19 @@ Natalia Bermúdez
 <li><p><strong>Aujourd’hui : les basiques de l’analyse de données (préparation, visualisation et statistiques descriptives)</strong></p></li>
 </ul>
 </div>
+<aside class="notes">
+<p>Les données sont centrales en économétrie. Selon un article du New York Times souvent cité, les data scientists passent 50 à 80 % de leur temps dans ce travail de collecte/préparation, avant même de pouvoir explorer les données. Aujourd’hui : les bases — préparer, visualiser, décrire.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section class="slide level2">
 
@@ -263,7 +276,7 @@ Natalia Bermúdez
 <section id="installation-de-stata" class="slide level2 smaller">
 <h2>Installation de <code>Stata</code></h2>
 <p>Cf. <a href="https://lola.hec.uliege.be/mod/page/view.php?id=46247">guide sur lola</a></p>
-<h3 id="téléchargement-depuis-dox-version-stata-statanowse">1. Téléchargement depuis DOX (version stata <strong>StataNow/SE</strong>)</h3>
+<h3 id="téléchargement-depuis-dox-version-stata-statanowse">1. Téléchargement depuis DOX (version Stata <strong>StataNow/SE</strong>)</h3>
 <ul>
 <li>Mot de passe = stata19hec</li>
 <li>Version Windows : <a href="https://dox.uliege.be/index.php/s/dXvpvWNjR7KXSkX">https://dox.uliege.be/index.php/s/dXvpvWNjR7KXSkX</a></li>
@@ -272,11 +285,11 @@ Natalia Bermúdez
 <h3 id="installation">2. Installation</h3>
 <ul>
 <li>Lancer l’installateur et choisir la version <strong>StataNow/SE</strong>.</li>
-<li>Ensuite encoder les credentials ci-dessous:
+<li>Ensuite encoder les credentials ci-dessous :
 <ul>
-<li>Auhorization: rnje</li>
-<li>Code: 0n0b koke $m7k xamu 26b7 v9fm hd83 zm7t cq4y t</li>
-<li>Serial number: 401909325829</li>
+<li>Authorization : rnje</li>
+<li>Code : 0n0b koke $m7k xamu 26b7 v9fm hd83 zm7t cq4y t</li>
+<li>Serial number : 401909325829</li>
 </ul></li>
 </ul>
 </section>
@@ -342,7 +355,7 @@ Natalia Bermúdez
 <h2>Exercice 1</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_be888ee5" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_b875b632" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -408,16 +421,16 @@ Natalia Bermúdez
 </section>
 <section id="importer-des-données" class="slide level2 smaller">
 <h2>Importer des données</h2>
-<h3 id="stata-peut-importer-des-données-depuis-différents-formats"><code>stata</code> peut importer des données depuis différents formats :</h3>
+<h3 id="stata-peut-importer-des-données-depuis-différents-formats"><code>Stata</code> peut importer des données depuis différents formats :</h3>
 <ul>
-<li><p>Format stata : extension <code>.dta</code></p>
+<li><p>Format Stata : extension <code>.dta</code></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a href=""></a><span class="kw">use</span> dataset_name.dta, <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Format Excel : extension <code>.xls</code> ou <code>.xlsx</code></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href=""></a>import excel <span class="kw">using</span> dataset_name.xlsx, firstrow <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Attention au format du fichier excel : une ligne est une observation, une colonne une variable</li>
 </ul></li>
-<li><p>Format csv : extension <code>.csv</code></p>
+<li><p>Format CSV : extension <code>.csv</code></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href=""></a>import delimited <span class="kw">using</span> dataset_name.txt, delimiters(<span class="st">","</span>) <span class="kw">replace</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Chaque élément est séparé de l’ensemble des données par un <code>delimiter</code> qui peut être : une tabulation, une virgule, un point-virgule…</li>
@@ -459,7 +472,7 @@ Natalia Bermúdez
 <h2>Exercice 2</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_77230f49" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_b4203834" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -532,7 +545,7 @@ Natalia Bermúdez
 <li><p>Mathématique, par exemple :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb17-1"><a href=""></a><span class="kw">gen</span> variable1 = 200</span>
 <span id="cb17-2"><a href=""></a><span class="kw">gen</span> variable2 = variable1*2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>Du texte (<code>string</code> en <code>stata</code>), par exemple :</p>
+<li><p>Du texte (<code>string</code> en <code>Stata</code>), par exemple :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb18-1"><a href=""></a><span class="kw">gen</span> variable1 = <span class="st">"coucou"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul></li>
 <li><p>Une fonction de variables existantes :</p>
@@ -608,7 +621,7 @@ Natalia Bermúdez
 <h2>Exercice 3</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_d14d8a3f" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_b3e5220c" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -621,7 +634,7 @@ Natalia Bermúdez
 <p><em>Félicitations, vous avez créé votre première variable !</em> Utilisez la commande <code>browse</code> pour la voir dans la base.</p>
 </section>
 <section id="syntaxe-de-stata" class="slide level2">
-<h2>Syntaxe de stata</h2>
+<h2>Syntaxe de Stata</h2>
 <p>La plupart des commandes ont la syntaxe suivante :</p>
 <div class="center">
 <p><img data-src="img/stata-command-anatomy.png" style="width:60.0%"></p>
@@ -657,7 +670,7 @@ Natalia Bermúdez
 </ul></li>
 <li><p><strong>Dans les calculs</strong>, une valeur manquante produit généralement une valeur manquante :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb28-1"><a href=""></a><span class="kw">display</span> . + 10</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p><code>Stata</code> assigne la valeur <span class="math inline">\(+\infty\)</span> à une manquante :</p></li>
+<li><p><code>Stata</code> assigne la valeur <span class="math inline">\(+\infty\)</span> à une valeur manquante :</p></li>
 </ul>
 <div class="fragment">
 <p>Attention à la propagation des valeurs manquantes ! :</p>
@@ -743,7 +756,7 @@ Natalia Bermúdez
 <h2>Exercice 4 : Nettoyage des données</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_111af1ae" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_4af4288f" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <p>On utilise la base <code>gapminder</code> précédemment importée.</p>
@@ -936,7 +949,7 @@ Natalia Bermúdez
 <h2>Exercice 5 : Premiers graphiques</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_2d6a718c" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_04bd905f" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <p>On utilise les données <code>gapminder</code>.</p>
@@ -1041,7 +1054,7 @@ Natalia Bermúdez
 </div></div>
 </section>
 <section id="statistiques-descriptives-les-commandes-stata" class="slide level2">
-<h2>Statistiques descriptives : les commandes stata</h2>
+<h2>Statistiques descriptives : les commandes Stata</h2>
 <h3 id="variables-numériques">Variables numériques</h3>
 <p>La commande <code>summarize</code> (<code>sum</code>) permet d’afficher des statistiques de base sur une ou plusieurs variables numériques de la base de données :</p>
 <ul>
@@ -1051,7 +1064,7 @@ Natalia Bermúdez
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb42-1"><a href=""></a><span class="kw">summarize</span> gdp population, <span class="kw">detail</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="statistiques-descriptives-les-commandes-stata-1" class="slide level2">
-<h2>Statistiques descriptives : les commandes stata</h2>
+<h2>Statistiques descriptives : les commandes Stata</h2>
 <h3 id="variable-discrète">Variable discrète</h3>
 <p><code>tabulate</code> (<code>tab</code>) permet d’afficher les tableaux de fréquences (i.e., la distribution) des variables numériques catégorielles ou des variables textuelles :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb43-1"><a href=""></a><span class="kw">tabulate</span> country</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1096,6 +1109,19 @@ Natalia Bermúdez
 <li>Difficile à interpréter car sensible à la dispersion des variables par rapport à la moyenne.</li>
 </ul>
 </div>
+<aside class="notes">
+<p>La covariance mesure la variabilité jointe de x et y, mais son échelle dépend des unités de x et y — impossible de comparer deux covariances entre elles. D’où le besoin de la normaliser : la corrélation (slide suivante).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="corrélation" class="slide level2">
 <h2>Corrélation</h2>
@@ -1111,6 +1137,19 @@ Natalia Bermúdez
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb47-1"><a href=""></a>cor infant_mortality fertility, cov</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
 </div>
+<aside class="notes">
+<p>La corrélation normalise la covariance par les écarts-types de x et y — ça la rend comparable d’une paire de variables à l’autre, contrairement à la covariance.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="corrélation-1" class="slide level2">
 <h2>Corrélation</h2>
@@ -1125,6 +1164,19 @@ Natalia Bermúdez
 <p><em>Un autre source : <a href="https://www.mathsisfun.com/data/correlation.html">mathisfun</a></em></p>
 </div>
 </div>
+<aside class="notes">
+<p>Signe = direction de la relation (positive/négative) ; valeur absolue proche de 1 = association linéaire forte, proche de 0 = faible. Rappel implicite : ça ne dit toujours rien sur la causalité.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="exercice-6-statistiques-descriptives" class="slide level2 scrollable">
 <h2>Exercice 6 : statistiques descriptives</h2>
@@ -1137,7 +1189,7 @@ Natalia Bermúdez
 </section>
 <section id="à-retenir-utiliser-des-do-files" class="slide level2 smaller">
 <h2>[À retenir] Utiliser des do files</h2>
-<p>Dofile = un script contenant une suite de commandes stata</p>
+<p>Dofile = un script contenant une suite de commandes Stata</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -1174,7 +1226,7 @@ Natalia Bermúdez
 </div></div>
 </section>
 <section id="à-retenir-commandes-principales-en-stata" class="slide level2 smaller">
-<h2>[À retenir] Commandes principales en stata</h2>
+<h2>[À retenir] Commandes principales en Stata</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 56%">
@@ -1196,15 +1248,15 @@ Natalia Bermúdez
 <td><code>use</code>, <code>save</code>, <code>append</code>, <code>merge</code></td>
 </tr>
 <tr class="odd">
-<td>Data management</td>
+<td>Gestion des données</td>
 <td><code>reshape</code>, <code>collapse</code></td>
 </tr>
 <tr class="even">
-<td>Gérer variables</td>
+<td>Gérer les variables</td>
 <td><code>replace</code>, <code>rename</code>, <code>encode</code>, <code>sort</code>, <code>keep</code>, <code>drop</code></td>
 </tr>
 <tr class="odd">
-<td>Gérer observations</td>
+<td>Gérer les observations</td>
 <td><code>keep if</code>, <code>drop if</code></td>
 </tr>
 <tr class="even">
@@ -1243,7 +1295,7 @@ Natalia Bermúdez
 </div></div>
 </section>
 <section id="où-en-sommes-nous-de-notre-quête-de-la-causalité" class="slide level2 smaller">
-<h2>Où en sommes-nous de notre quête de la causalité</h2>
+<h2>Où en sommes-nous de notre quête de la causalité ?</h2>
 <p>✅ <strong>Comment gérer les données ?</strong> Regardez-les, ordonnez-les, visualisez-les…</p>
 <p>❌ Comment résumer une relation entre plusieurs variables ?</p>
 <p>❌ Qu’est-ce que la causalité ?</p>
@@ -1255,7 +1307,7 @@ Natalia Bermúdez
 <h2>À la semaine prochaine !</h2>
 <div class="closing-center">
 <p><span class="closing-label">Contact</span></p>
-<p><a href="mailto:natalia.bermudez@uclouvain.be">natalia.bermudez@uclouvain.be</a></p>
+<p><a href="mailto:natalia.bermudez@uliege.be">natalia.bermudez@uliege.be</a></p>
 <div class="muted">
 <p>Un grand merci à <a href="https://malkaguillot.github.io/">Malka Guillot</a> pour avoir partagé les supports de ce cours, ainsi qu’à <a href="mailto:florian.oswald@sciencespo.fr">Florian Oswald</a> et à toute l’équipe de ScPoEconometrics pour leur livre et leurs <a href="https://github.com/ScPoEcon/ScPoEconometrics-Slides">ressources</a>.</p>
 </div>

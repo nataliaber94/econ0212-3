@@ -32,7 +32,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="intro_files/libs/revealjs/dist/theme/quarto-a28cc82d0f57636676cb34c98b4d0bf5.css">
+  <link rel="stylesheet" href="intro_files/libs/revealjs/dist/theme/quarto-19745dda9f5001042433f4cece23b1f9.css">
   <link href="intro_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="intro_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="intro_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -156,6 +156,19 @@ Natalia Bermúdez
 <p><img data-src="../img/content/mindmap-econometrie.png" class="quarto-figure quarto-figure-center" style="width:78.0%"></p>
 </figure>
 </div>
+<aside class="notes">
+<p>Se présenter : Natalia Bermúdez, chercheuse postdoctorale UCLouvain/HEC Liège, travaux sur le marché du travail et les politiques d’emploi en Belgique — l’économétrie appliquée, c’est mon quotidien.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="bienvenue-dans-ce-cours-déconométrie-appliquée" class="slide level2">
 <h2>Bienvenue dans ce cours d’économétrie <em>appliquée</em> !</h2>
@@ -207,13 +220,35 @@ Natalia Bermúdez
 <ul>
 <li>Explorer la prévalence et l’importance des phénomènes sociaux</li>
 </ul></li>
+</ul>
+<div class="fragment">
+<ul>
 <li><strong>Tester</strong> des théories et hypothèses économiques
 <ul>
 <li>Comprendre les conséquences des politiques publiques</li>
 <li>Quantifier les paramètres économiques d’intérêt</li>
 </ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
 <li>Faire des <strong>prévisions</strong> économiques</li>
 </ul>
+<aside class="notes">
+<p>Trois choses : estimer des relations (prévalence/importance de phénomènes sociaux), tester des théories/hypothèses (conséquences de politiques publiques, quantifier des paramètres), et prévoir.</p>
+<p>Transition : pour faire ça, on suit toujours les mêmes grandes étapes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
 </section>
 <section id="les-étapes-de-lanalyse-économétrique" class="slide level2 smaller">
 <h2>Les étapes de l’analyse économétrique</h2>
@@ -236,6 +271,19 @@ Natalia Bermúdez
 <ul>
 <li>On utilise un logiciel de statistiques et d’économétrie : <code>Stata</code></li>
 </ul>
+<aside class="notes">
+<p>Modèle économique (théorie, ex : offre/demande) → modèle économétrique (relation fonctionnelle qu’on quantifie et teste) → collecte des données → implémentation avec Stata.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="quels-sont-les-domaines-dapplication" class="slide level2">
 <h2>Quels sont les domaines d’application ?</h2>
@@ -244,6 +292,19 @@ Natalia Bermúdez
 <div class="center">
 <p><img data-src="wordcloud_domains.png" class="img-large" style="width:120.0%"></p>
 </div>
+<aside class="notes">
+<p>L’économétrie n’est pas un domaine à part, c’est une boîte à outils utilisée partout : travail, santé, éducation, développement, finance, environnement…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="léconométrie-répond-à-des-questions-importantes" class="slide level2 smaller">
 <h2>L’économétrie répond à des questions importantes</h2>
@@ -422,24 +483,45 @@ Natalia Bermúdez
 <li>Données de panel (<em>panel data</em>)</li>
 <li>Données en coupe répétées (<em>pooled cross sections</em>)</li>
 </ul>
+<div class="fragment">
 <h3 id="caractéristiques-principales">Caractéristiques principales</h3>
 <ul>
 <li>Quelle entité (individu, ménage) représente une observation ?</li>
 <li>Quelle est la population considérée et l’échantillon observé ?</li>
 <li>Quelle est la période temporelle ? L’ordre des données est-il important ?</li>
 </ul>
+<aside class="notes">
+<p>Transition : pour faire cette analyse, il nous faut des données — et toutes les données ne se ressemblent pas. On reverra ces distinctions tout au long du cours, parce qu’elles déterminent les méthodes qu’on peut utiliser.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
 </section>
 <section id="types-de-données-données-en-coupe-cross-section" class="slide level2">
 <h2>Types de données — données en coupe (<em>cross-section</em>)</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <ul>
-<li><p>Échantillon d’individus, de ménages, d’entreprises, de villes, de régions… observés à un moment donné</p></li>
-<li><p>Les observations sont relativement indépendantes les unes des autres</p>
+<li>Échantillon d’individus, de ménages, d’entreprises, de villes, de régions… observés à <strong>un moment donné</strong></li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>Les observations sont relativement indépendantes les unes des autres
 <ul>
 <li>Ex : échantillon aléatoire d’une population</li>
 </ul></li>
-<li><p>L’ordre des observations n’a pas d’importance</p></li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>L’ordre des observations n’a pas d’importance</li>
 </ul>
 </div><div class="column" style="width:45%;">
 <p><img data-src="../img/content/data-cross-section2.png" style="width:90.0%"></p>
@@ -450,7 +532,7 @@ Natalia Bermúdez
 <div class="columns">
 <div class="column" style="width:55%;">
 <ul>
-<li>Observation d’une variable au cours du temps
+<li>Observation <strong>d’une variable au cours du temps</strong>
 <ul>
 <li>Ex : produit intérieur brut, prix d’actions, indice d’inflation…</li>
 </ul></li>
@@ -458,7 +540,7 @@ Natalia Bermúdez
 <ul>
 <li>Tendances, saisonnalité</li>
 </ul></li>
-<li>L’ordre des observations <strong>a de l’importance</strong>: les événements passés peuvent influencer les événements futurs</li>
+<li>L’ordre des observations <strong>a de l’importance</strong> : les événements passés peuvent influencer les événements futurs</li>
 </ul>
 </div><div class="column" style="width:45%;">
 <p><img data-src="../img/content/data-time-series2.png" style="width:90.0%"></p>
@@ -469,7 +551,7 @@ Natalia Bermúdez
 <div class="columns">
 <div class="column" style="width:55%;">
 <ul>
-<li><p>Les mêmes unités sont suivies au cours de plusieurs périodes</p></li>
+<li><p>Les <strong>mêmes unités sont suivies au cours de plusieurs périodes</strong></p></li>
 <li><p>Dimensions <strong>individuelle</strong> et <strong>temporelle</strong></p></li>
 <li><p>L’ordre des observations dans la dimension temporelle <strong>a de l’importance</strong></p></li>
 </ul>
@@ -514,6 +596,19 @@ Natalia Bermúdez
 <li class="fragment"><code>Stata</code> dispose d’une grande collection de modules spécialisés</li>
 <li class="fragment">C’est un bon investissement pour le mémoire de master</li>
 </ol>
+<aside class="notes">
+<p>Pourquoi pas Excel ? Pas reproductible, pénible pour fusionner/nettoyer, limité en taille, pas conçu pour de vraies analyses économétriques (slide suivante).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="pourquoi-ne-pas-simplement-utiliser-excel" class="slide level2">
 <h2>Pourquoi ne pas simplement utiliser Excel ?</h2>
@@ -554,14 +649,14 @@ Natalia Bermúdez
 <li>Élasticité</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:33%;">
+</div><p>. . .</p><div class="column" style="width:33%;">
 <h3 id="cette-année">Cette année</h3>
 <ul>
 <li>Modélisation de faits économiques</li>
 <li>Régression linéaire (simple et multiple)</li>
 <li>Concept de causalité</li>
 </ul>
-</div><div class="column" style="width:33%;">
+</div><p>. . .</p><div class="column" style="width:33%;">
 <h3 id="en-master-économie">En master (économie)</h3>
 <ul>
 <li>Prise en compte de la dimension temporelle</li>
@@ -589,6 +684,19 @@ Natalia Bermúdez
 <li class="fragment">Cours d’économie appliquée, de finance empirique, de machine learning…</li>
 </ul></li>
 </ol>
+<aside class="notes">
+<p>À la fin du cours : (1) outils pour une vraie analyse économétrique — régression, inférence, évaluation d’impact, prise en main de Stata ; (2) regard critique — distinguer corrélation et causalité ; (3) préparation au master.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="plan-de-cours" class="slide level2">
 <h2>Plan de cours</h2>
@@ -628,7 +736,7 @@ Natalia Bermúdez
 </tr>
 <tr class="odd">
 <td style="text-align: center;">14-10</td>
-<td style="text-align: left;">4. Le modèle de régression linéaire multiple (RLM): estimation</td>
+<td style="text-align: left;">4. Le modèle de régression linéaire multiple (RLM) : estimation</td>
 <td style="text-align: left;">4. Causalité</td>
 </tr>
 <tr class="even">
@@ -639,7 +747,7 @@ Natalia Bermúdez
 <tr class="odd">
 <td style="text-align: center;">25-11</td>
 <td style="text-align: left;">6. Régression linéaire : inférence</td>
-<td style="text-align: left;">6. Régressions: extensions</td>
+<td style="text-align: left;">6. Régressions : extensions</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">02-12</td>
@@ -659,8 +767,21 @@ Natalia Bermúdez
 </tbody>
 </table>
 <div class="muted">
-<p>Note: Pas de cours le 21-10 et le 04-11.</p>
+<p>Note : pas de cours le 21-10 ni le 04-11.</p>
 </div>
+<aside class="notes">
+<p>Insister : pas de cours le 21-10 ni le 04-11. Aujourd’hui (23-09) on couvre à la fois l’introduction ET le chapitre 1 (analyse de données).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="support-de-cours-et-ressources-utiles" class="slide level2">
 <h2>Support de cours et ressources utiles</h2>
@@ -728,16 +849,16 @@ Natalia Bermúdez
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">SEG &amp; IG</td>
+<td style="text-align: center;">SEG &amp; IG (Groupe 1)</td>
 <td style="text-align: center;">Vendredi</td>
 <td style="text-align: center;">11h00 - 13h00</td>
-<td style="text-align: center;"><strong>A CONFIRMER</strong></td>
+<td style="text-align: center;">N1a 135</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">SEG &amp; IG</td>
+<td style="text-align: center;">SEG &amp; IG (Groupe 2)</td>
 <td style="text-align: center;">Vendredi</td>
 <td style="text-align: center;">14h00 - 16h00</td>
-<td style="text-align: center;"><strong>A CONFIRMER</strong></td>
+<td style="text-align: center;">N1d 0/86</td>
 </tr>
 </tbody>
 </table>
@@ -746,7 +867,7 @@ Natalia Bermúdez
 <li><strong>Participation active aux cours</strong></li>
 <li><strong>Amenez votre ordinateur</strong></li>
 </ul>
-<p>Contact par e-mail: préciser le code (ECON0212) du cours</p>
+<p>Contact par e-mail : préciser le code (ECON0212) du cours</p>
 <div class="muted">
 <p>Groupes et horaires définitifs communiqués sur lol@ après la fin des inscriptions.</p>
 </div>
@@ -763,9 +884,9 @@ Natalia Bermúdez
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>A CONFIRMER</strong></td>
+<td><strong>À CONFIRMER</strong></td>
 <td>Tom Gillet — <a href="mailto:tom.gillet@uliege.be">tom.gillet@uliege.be</a></td>
-<td>Natalia Bermúdez — <a href="mailto:natalia.bermudez@uclouvain.be">natalia.bermudez@uclouvain.be</a></td>
+<td>Natalia Bermúdez — <a href="mailto:natalia.bermudez@uliege.be">natalia.bermudez@uliege.be</a></td>
 </tr>
 <tr class="even">
 <td>→ TPs</td>
@@ -790,7 +911,7 @@ Natalia Bermúdez
 </ul></li>
 <li><em>Solutions</em> des applications pratiques</li>
 <li><em>Bases de données</em> utilisées dans le cours</li>
-<li>Pas de syllabus ? : pour chaque chapitre, voir les <a href="../references.html">références</a></li>
+<li>Pas de syllabus ? Pour chaque chapitre, voir les <a href="../references.html">références</a></li>
 </ul>
 </section>
 <section id="supports-et-déroulement-du-cours-1" class="slide level2">
@@ -800,7 +921,7 @@ Natalia Bermúdez
 <li>Exercices <strong><span class="alert">théoriques</span></strong> et <strong><span class="alert">pratiques</span></strong>.
 <ul>
 <li>Amenez votre ordinateur !</li>
-<li>/!\ Définition des <strong>groupes</strong> : communiqués sur lol@ après la fin des inscriptions</li>
+<li>/!\ <strong>Groupes</strong> : communiqués sur lol@ après la fin des inscriptions</li>
 </ul></li>
 <li>Énoncés des exercices (et bases de données)</li>
 <li>Solutions des exercices</li>
@@ -831,7 +952,7 @@ Natalia Bermúdez
 </div><div class="column" style="width:33%;">
 <h4 id="wooclap">Wooclap</h4>
 <p><img data-src="ex-wooclap.png" style="width:90.0%"></p>
-<p>Pour vérifier la compréhension des concepts théoriques et pratique clefs</p>
+<p>Pour vérifier la compréhension des concepts théoriques et pratiques clefs</p>
 </div></div>
 <div class="alert">
 <p>Amenez votre ordinateur, mais restez concentré·es !</p>
@@ -849,8 +970,8 @@ Natalia Bermúdez
 <li class="fragment">interprétation des résultats</li>
 <li class="fragment">analyse critique de l’approche économétrique</li>
 </ul></li>
-<li class="fragment"><p><strong>Remise</strong> : raport (2 page max) + code</p></li>
-<li class="fragment"><p><strong>Courte évaluation individuelle</strong> portant sur le projet (5–10 minute QCM lol@)</p></li>
+<li class="fragment"><p><strong>Remise</strong> : rapport (2 pages max) + code</p></li>
+<li class="fragment"><p><strong>Courte évaluation individuelle</strong> portant sur le projet (QCM de 5 à 10 minutes sur lol@)</p></li>
 <li class="fragment"><p>Article, données et consignes communiqués en cours de semestre</p></li>
 </ul></li>
 <li class="fragment"><p><strong>Examen</strong> <em>(janvier et août)</em></p>
@@ -864,11 +985,24 @@ Natalia Bermúdez
 <h2>À la semaine prochaine !</h2>
 <div class="closing-center">
 <p><span class="closing-label">Contact</span></p>
-<p><a href="mailto:natalia.bermudez@uclouvain.be">natalia.bermudez@uclouvain.be</a></p>
+<p><a href="mailto:natalia.bermudez@uliege.be">natalia.bermudez@uliege.be</a></p>
 <div class="muted">
 <p>Un grand merci à <a href="https://malkaguillot.github.io/">Malka Guillot</a> pour avoir partagé les supports de ce cours, ainsi qu’à <a href="mailto:florian.oswald@sciencespo.fr">Florian Oswald</a> et à toute l’équipe de ScPoEconometrics pour leur livre et leurs <a href="https://github.com/ScPoEcon/ScPoEconometrics-Slides">ressources</a>.</p>
 </div>
 </div>
+<aside class="notes">
+<p>Transition vers le chapitre 1 : on enchaîne directement aujourd’hui sur l’analyse de données — avant de pouvoir estimer quoi que ce soit, il faut savoir manipuler ses données.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 </section>
     </div>
