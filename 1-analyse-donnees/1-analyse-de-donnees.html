@@ -351,7 +351,7 @@ Natalia Bermúdez
 <h2>Exercice 1</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_81784cef" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_e3709f71" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -468,7 +468,7 @@ Natalia Bermúdez
 <h2>Exercice 2</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_fb7f851f" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_a39a7783" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -579,13 +579,7 @@ Natalia Bermúdez
 </ul></li>
 </ul>
 <aside class="notes">
-<p>Faire un WOOCLAP pour tester le fonctionnement :</p>
-<p>J’ai une variable <code>age</code> (en années), et je veux créer une nouvelle catégorie “jeune adulte” pour les individus âgés de 18 à 30 ans. Quel code fonctionnera ?</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb24-1"><a href=""></a><span class="kw">replace</span> age_category = <span class="st">"young"</span> <span class="kw">if</span> age &lt; 30 &amp; age &lt; 18</span>
-<span id="cb24-2"><a href=""></a><span class="kw">replace</span> age_category = <span class="st">"young"</span> <span class="kw">if</span> age &lt; 30 | age &lt; 18</span>
-<span id="cb24-3"><a href=""></a><span class="kw">replace</span> age_category = <span class="st">"young"</span> <span class="kw">if</span> age &lt;= 30 &amp; age &lt;= 18</span>
-<span id="cb24-4"><a href=""></a><span class="kw">gen</span> age_category = <span class="st">"young"</span> <span class="kw">if</span> age &lt;= 30 &amp; age &lt;= 18</span>
-<span id="cb24-5"><a href=""></a><span class="kw">replace</span> age_category = <span class="st">"young"</span> <span class="kw">if</span> <span class="fu">inrange</span>(age , 18, 30)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -602,14 +596,14 @@ Natalia Bermúdez
 <h2>Sélection d’observations</h2>
 <ul>
 <li><p>Garder ou supprimer les observations sous certaines conditions</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb25-1"><a href=""></a><span class="kw">keep</span> <span class="kw">if</span> CONDITION</span>
-<span id="cb25-2"><a href=""></a><span class="kw">drop</span> <span class="kw">if</span> CONDITION</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb24-1"><a href=""></a><span class="kw">keep</span> <span class="kw">if</span> CONDITION</span>
+<span id="cb24-2"><a href=""></a><span class="kw">drop</span> <span class="kw">if</span> CONDITION</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Par exemple :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb26-1"><a href=""></a><span class="co">/* Sélectionne les pays du continent américain */</span></span>
-<span id="cb26-2"><a href=""></a><span class="kw">keep</span> <span class="kw">if</span> continent==<span class="st">"Americas"</span></span>
-<span id="cb26-3"><a href=""></a></span>
-<span id="cb26-4"><a href=""></a><span class="co">/* Supprime les pays américains sauf l'Argentine */</span></span>
-<span id="cb26-5"><a href=""></a><span class="kw">drop</span> <span class="kw">if</span> continent==<span class="st">"Americas"</span> &amp; country!=<span class="st">"Argentina"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb25-1"><a href=""></a><span class="co">/* Sélectionne les pays du continent américain */</span></span>
+<span id="cb25-2"><a href=""></a><span class="kw">keep</span> <span class="kw">if</span> continent==<span class="st">"Americas"</span></span>
+<span id="cb25-3"><a href=""></a></span>
+<span id="cb25-4"><a href=""></a><span class="co">/* Supprime les pays américains sauf l'Argentine */</span></span>
+<span id="cb25-5"><a href=""></a><span class="kw">drop</span> <span class="kw">if</span> continent==<span class="st">"Americas"</span> &amp; country!=<span class="st">"Argentina"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
 <p>⚠️ Comme c’est le cas dans de nombreux logiciels, l’expression logique s’écrit <code>==</code></p>
 </section>
@@ -617,7 +611,7 @@ Natalia Bermúdez
 <h2>Exercice 3</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_f3bcfa8f" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_71fb27b6" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -625,7 +619,7 @@ Natalia Bermúdez
 <li><p>Combien de <strong>variables</strong> ? De quel type ?</p></li>
 <li><p>Ne gardez que les observations correspondant au continent <code>Asia</code>.</p></li>
 <li><p>Chargez à nouveau la base, puis créez la variable <code>gdppercap</code> égale au PIB par habitant grâce au code suivant :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb27-1"><a href=""></a><span class="kw">gen</span> gdppercap = gdp / population</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb26-1"><a href=""></a><span class="kw">gen</span> gdppercap = gdp / population</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 <p><em>Félicitations, vous avez créé votre première variable !</em> Utilisez la commande <code>browse</code> pour la voir dans la base.</p>
 </section>
@@ -665,7 +659,7 @@ Natalia Bermúdez
 <li><code>""</code> pour une variable string</li>
 </ul></li>
 <li><p><strong>Dans les calculs</strong>, une valeur manquante produit généralement une valeur manquante :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb28-1"><a href=""></a><span class="kw">display</span> . + 10</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb27-1"><a href=""></a><span class="kw">display</span> . + 10</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><code>Stata</code> assigne la valeur <span class="math inline">\(+\infty\)</span> à une valeur manquante :</p></li>
 </ul>
 <div class="fragment">
@@ -720,8 +714,8 @@ Natalia Bermúdez
 <p><img data-src="img/stata-append.png" style="width:80.0%"></p>
 </div>
 <div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb29-1"><a href=""></a><span class="kw">use</span> economy2004.dta, <span class="kw">replace</span></span>
-<span id="cb29-2"><a href=""></a><span class="kw">append</span> <span class="kw">using</span> economy2005.dta</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb28-1"><a href=""></a><span class="kw">use</span> economy2004.dta, <span class="kw">replace</span></span>
+<span id="cb28-2"><a href=""></a><span class="kw">append</span> <span class="kw">using</span> economy2005.dta</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="combiner-des-bases-de-données-merge" class="slide level2">
@@ -730,8 +724,8 @@ Natalia Bermúdez
 <p><img data-src="img/stata-merge-11.png" style="width:80.0%"></p>
 </div>
 <div class="fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb30-1"><a href=""></a><span class="kw">use</span> economy2004.dta, <span class="kw">replace</span></span>
-<span id="cb30-2"><a href=""></a><span class="kw">merge</span> 1:1 country <span class="kw">using</span> economy2005.dta</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb29-1"><a href=""></a><span class="kw">use</span> economy2004.dta, <span class="kw">replace</span></span>
+<span id="cb29-2"><a href=""></a><span class="kw">merge</span> 1:1 country <span class="kw">using</span> economy2005.dta</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="formats-wide-et-long-reshape" class="slide level2 smaller">
@@ -742,9 +736,9 @@ Natalia Bermúdez
 <div class="fragment">
 <ul>
 <li><p>Long → Wide</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb31-1"><a href=""></a><span class="kw">reshape</span> (<span class="kw">wide</span>) lifeexp, i(<span class="fu">year</span>) j(country)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb30-1"><a href=""></a><span class="kw">reshape</span> (<span class="kw">wide</span>) lifeexp, i(<span class="fu">year</span>) j(country)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Wide → Long</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb32-1"><a href=""></a><span class="kw">reshape</span> (<span class="kw">long</span>) lifeexpA lifeexpB lifeexpC, i(<span class="fu">year</span>) j(country)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb31-1"><a href=""></a><span class="kw">reshape</span> (<span class="kw">long</span>) lifeexpA lifeexpB lifeexpC, i(<span class="fu">year</span>) j(country)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
 </div>
 </section>
@@ -752,7 +746,7 @@ Natalia Bermúdez
 <h2>Exercice 4 : Nettoyage des données</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_e7bd8f33" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_5d4155a4" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <p>On utilise la base <code>gapminder</code> précédemment importée.</p>
@@ -819,13 +813,13 @@ Natalia Bermúdez
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong><em>Histogramme</em></strong> : visualiser la distribution d’une variable</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb33-1"><a href=""></a><span class="kw">histogram</span> wage</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb32-1"><a href=""></a><span class="kw">histogram</span> wage</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="center">
 <p><img data-src="img/hist_wage.png" style="width:90.0%"></p>
 </div>
 </div><div class="column" style="width:50%;">
 <p><strong><em>Densité</em></strong> : visualiser la distribution d’une variable</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb34-1"><a href=""></a><span class="kw">kdensity</span> time_worked</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb33-1"><a href=""></a><span class="kw">kdensity</span> time_worked</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="center">
 <p><img data-src="img/dens_time_worked.png" style="width:90.0%"></p>
 </div>
@@ -840,7 +834,7 @@ Natalia Bermúdez
 <li><strong><em>Diagramme en bâton</em></strong> (<em>bar chart</em>) :
 <ul>
 <li><p>Si la variable discrète est numérique :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb35-1"><a href=""></a><span class="kw">graph</span> <span class="bn">bar</span> (<span class="fu">count</span>), <span class="bn">over</span>(nb_enfants)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb34-1"><a href=""></a><span class="kw">graph</span> <span class="bn">bar</span> (<span class="fu">count</span>), <span class="bn">over</span>(nb_enfants)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -854,13 +848,13 @@ Natalia Bermúdez
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong><em>Scatter plot</em></strong> : montrer les valeurs d’une variable en fonction de l’autre</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb36-1"><a href=""></a><span class="kw">twoway</span> <span class="kw">scatter</span> gdp gini_ineq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb35-1"><a href=""></a><span class="kw">twoway</span> <span class="kw">scatter</span> gdp gini_ineq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="center">
 <p><img data-src="img/pib_gini_scatter.png" style="width:90.0%"></p>
 </div>
 </div><div class="column" style="width:50%;">
 <p><strong><em>Diagramme en bâton</em></strong> (<em>bar chart</em>) : variable quantitative selon les valeurs d’une variable qualitative (ou catégorielle)</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb37-1"><a href=""></a><span class="kw">graph</span> <span class="bn">bar</span> (<span class="kw">mean</span>) wage, <span class="bn">over</span>(type_contract)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb36-1"><a href=""></a><span class="kw">graph</span> <span class="bn">bar</span> (<span class="kw">mean</span>) wage, <span class="bn">over</span>(type_contract)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="center">
 <p><img data-src="img/salaire_contract.png" style="width:85.0%"></p>
 </div>
@@ -879,7 +873,7 @@ Natalia Bermúdez
 <ul>
 <li>Faire en particulier attention à la présence de potentielles variables manquantes</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb38-1"><a href=""></a>misstable <span class="kw">summarize</span> gdp fertility life_expectancy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb37-1"><a href=""></a>misstable <span class="kw">summarize</span> gdp fertility life_expectancy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li>Est-ce que les données contiennent cette information telle qu’<strong><em>une colonne/ligne</em></strong> correspond à ce que je veux représenter ?
 <ul>
 <li>Éventuellement utiliser <code>collapse</code> et/ou <code>reshape</code> pour transformer les données</li>
@@ -945,7 +939,7 @@ Natalia Bermúdez
 <h2>Exercice 5 : Premiers graphiques</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_f226c644" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_b93a0451" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <p>On utilise les données <code>gapminder</code>.</p>
@@ -1014,16 +1008,16 @@ Natalia Bermúdez
 <div class="column" style="width:50%;">
 <p><code>mean(x)</code> : la moyenne de toutes les valeurs de <code>x</code>.</p>
 <p><span class="math display">\[\bar{x} = \frac{1}{N}\sum_{i=1}^N x_i\]</span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb39-1"><a href=""></a><span class="kw">set</span> <span class="kw">obs</span> 100</span>
-<span id="cb39-2"><a href=""></a><span class="kw">gen</span> <span class="fu">y</span> = rnormal()</span>
-<span id="cb39-3"><a href=""></a><span class="kw">egen</span> y_mean=<span class="kw">mean</span>(<span class="fu">y</span>)</span>
-<span id="cb39-4"><a href=""></a>summ y_mean </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb38-1"><a href=""></a><span class="kw">set</span> <span class="kw">obs</span> 100</span>
+<span id="cb38-2"><a href=""></a><span class="kw">gen</span> <span class="fu">y</span> = rnormal()</span>
+<span id="cb38-3"><a href=""></a><span class="kw">egen</span> y_mean=<span class="kw">mean</span>(<span class="fu">y</span>)</span>
+<span id="cb38-4"><a href=""></a>summ y_mean </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p><code>Médiane</code> : la valeur de <span class="math inline">\(x_j\)</span> qui partage les observations en 2 parties égales (50 % au-dessus, 50 % en dessous). <span class="math inline">\(m\)</span> est la médiane si</p>
 <p><span class="math display">\[\Pr(X \leq m) \geq 0.5 \text{ et } \Pr(X \geq m) \geq 0.5\]</span></p>
 <p>La médiane est robuste à la présence de valeurs <em>extrêmes</em>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb40-1"><a href=""></a><span class="kw">egen</span> y_p50=<span class="kw">median</span>(<span class="fu">y</span>)</span>
-<span id="cb40-2"><a href=""></a>summ y_p50</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb39-1"><a href=""></a><span class="kw">egen</span> y_p50=<span class="kw">median</span>(<span class="fu">y</span>)</span>
+<span id="cb39-2"><a href=""></a>summ y_p50</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="dispersion" class="slide level2 smaller">
@@ -1045,8 +1039,8 @@ Natalia Bermúdez
 </div>
 </div>
 <p>Commande :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb41-1"><a href=""></a><span class="kw">egen</span> sd_x = <span class="fu">sd</span>(x)</span>
-<span id="cb41-2"><a href=""></a><span class="kw">generate</span> y_var = sd_x^2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb40-1"><a href=""></a><span class="kw">egen</span> sd_x = <span class="fu">sd</span>(x)</span>
+<span id="cb40-2"><a href=""></a><span class="kw">generate</span> y_var = sd_x^2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="statistiques-descriptives-les-commandes-stata" class="slide level2">
@@ -1057,21 +1051,21 @@ Natalia Bermúdez
 <li>la moyenne, l’écart-type et les valeurs extrêmes (min et max)</li>
 <li>L’option <code>detail</code> permet d’afficher des statistiques plus précises sur la distribution de la ou des variables : médiane et autres centiles.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb42-1"><a href=""></a><span class="kw">summarize</span> gdp population, <span class="kw">detail</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb41-1"><a href=""></a><span class="kw">summarize</span> gdp population, <span class="kw">detail</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="statistiques-descriptives-les-commandes-stata-1" class="slide level2">
 <h2>Statistiques descriptives : les commandes Stata</h2>
 <h3 id="variable-discrète">Variable discrète</h3>
 <p><code>tabulate</code> (<code>tab</code>) permet d’afficher les tableaux de fréquences (i.e., la distribution) des variables numériques catégorielles ou des variables textuelles :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb43-1"><a href=""></a><span class="kw">tabulate</span> country</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb42-1"><a href=""></a><span class="kw">tabulate</span> country</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="statistiques-croisées" class="slide level2">
 <h2>Statistiques croisées</h2>
 <h3 id="deux-variables-catégorielles">Deux variables catégorielles</h3>
 <p>Dans le cas où il y a 2 variables spécifiées, <code>table</code> produit une table de contingence :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb44-1"><a href=""></a><span class="kw">table</span> <span class="fu">year</span> country</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb43-1"><a href=""></a><span class="kw">table</span> <span class="fu">year</span> country</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <h3 id="deux-variables-catégorielle-vs.-quantitative">Deux variables : catégorielle vs.&nbsp;quantitative</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb45-1"><a href=""></a><span class="kw">tabstat</span> fertility, <span class="kw">by</span>(<span class="fu">year</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb44-1"><a href=""></a><span class="kw">tabstat</span> fertility, <span class="kw">by</span>(<span class="fu">year</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="comment-x-et-y-sont-associées-covariance-et-corrélation" class="slide level2 smaller scrollable">
 <h2>Comment <span class="math inline">\(x\)</span> et <span class="math inline">\(y\)</span> sont associées ? Covariance et corrélation</h2>
@@ -1128,9 +1122,9 @@ Natalia Bermúdez
 <div class="fragment">
 <ul>
 <li><p>La fonction <code>cor</code> calcule la corrélation :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb46-1"><a href=""></a>cor infant_mortality fertility</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb45-1"><a href=""></a>cor infant_mortality fertility</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>On ajoute l’option <code>cov</code> si on veut la covariance</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb47-1"><a href=""></a>cor infant_mortality fertility, cov</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb46-1"><a href=""></a>cor infant_mortality fertility, cov</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
 </div>
 <aside class="notes">
@@ -1198,11 +1192,11 @@ Natalia Bermúdez
 </ul></li>
 <li>Commenter ses dofiles : <code>//</code></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb48-1"><a href=""></a><span class="kw">di</span> 1+1 <span class="co">// commentaire sur une ligne</span></span>
-<span id="cb48-2"><a href=""></a></span>
-<span id="cb48-3"><a href=""></a><span class="co">/*</span></span>
-<span id="cb48-4"><a href=""></a><span class="co">Commentaire sur plusieurs lignes</span></span>
-<span id="cb48-5"><a href=""></a><span class="co">*/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb47-1"><a href=""></a><span class="kw">di</span> 1+1 <span class="co">// commentaire sur une ligne</span></span>
+<span id="cb47-2"><a href=""></a></span>
+<span id="cb47-3"><a href=""></a><span class="co">/*</span></span>
+<span id="cb47-4"><a href=""></a><span class="co">Commentaire sur plusieurs lignes</span></span>
+<span id="cb47-5"><a href=""></a><span class="co">*/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 ⇒ <strong>toujours</strong> utiliser un script</li>
 </ul>
 </div><div class="column" style="width:50%;">

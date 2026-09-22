@@ -266,13 +266,23 @@ Natalia Bermúdez
 <li>L’analyse économétrique permet de <strong>quantifier</strong> et de <strong>tester</strong> ces relations</li>
 </ul></li>
 </ul>
+<div class="fragment">
 <h3 id="collecter-les-données-nécessaires">2. Collecter les données nécessaires</h3>
+</div>
+<div class="fragment">
 <h3 id="implémenter-le-modèle-à-partir-des-données">3. Implémenter le modèle à partir des données</h3>
 <ul>
 <li>On utilise un logiciel de statistiques et d’économétrie : <code>Stata</code></li>
 </ul>
+</div>
 <aside class="notes">
 <p>Modèle économique (théorie, ex : offre/demande) → modèle économétrique (relation fonctionnelle qu’on quantifie et teste) → collecte des données → implémentation avec Stata.</p>
+<p>D’abord, on part d’un modèle économique.</p>
+<p>Un modèle économique est une représentation simplifiée de la réalité, fondée sur la théorie économique. Il permet de formuler des hypothèses sur les relations entre différentes variables économiques.</p>
+<p>La théorie économique nous indique que :</p>
+<p>Lorsque le prix d’un bien augmente, la quantité demandée tend à diminuer, toutes choses égales par ailleurs.</p>
+<p>À l’inverse, lorsque le prix augmente, la quantité offerte tend à augmenter, toutes choses égales par ailleurs.</p>
+<p>Ces relations constituent des prédictions théoriques que nous pouvons chercher à confronter aux données.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -329,10 +339,20 @@ Natalia Bermúdez
 <aside class="notes">
 <ul>
 <li><p><em>The Impact of the Mariel Boatlift on the Miami Labor Market</em> : les immigrants de Mariel ont augmenté la main-d’œuvre de Miami de 7 % (principalement des immigrants non qualifiés). L’afflux de Mariel semble néanmoins n’avoir eu aucun effet sur les salaires ou les taux de chômage des travailleurs moins qualifiés, même parmi les Cubains ayant immigré plus tôt.</p></li>
-<li><p>Salaire minimum et emploi peu qualifié : théorie du marché du travail vs.&nbsp;augmentation du salaire minimum au New Jersey. Étude des fast-foods à la frontière New Jersey–Pennsylvanie : l’augmentation ne réduit pas l’emploi.</p></li>
-<li><p>Angrist &amp; Krueger utilisent le <strong>trimestre de naissance</strong> comme instrument : les lois sur la scolarité obligatoire fixent un âge de sortie, donc les élèves nés au début de l’année finissent l’école obligatoire avec légèrement moins d’années de scolarité que ceux nés en fin d’année — une variation <em>quasi aléatoire</em> de la scolarité, non corrélée à la capacité.</p></li>
+<li><p>Cette étude cherche à évaluer l’effet d’une augmentation du salaire minimum sur l’emploi. En 1992, le New Jersey a augmenté son salaire minimum, contrairement à la Pennsylvanie voisine. Les chercheurs comparent l’évolution de l’emploi dans 410 restaurants fast-food des deux États, avant et après la réforme. Ils ne trouvent pas d’effet négatif de cette augmentation sur l’emploi.</p></li>
+</ul>
+<p>Salaire minimum et emploi peu qualifié : théorie du marché du travail vs.&nbsp;augmentation du salaire minimum au New Jersey. Étude des fast-foods à la frontière New Jersey–Pennsylvanie : l’augmentation ne réduit pas l’emploi.</p>
+<ul>
+<li>Les chercheurs cherchent à déterminer si une année d’études supplémentaire permet réellement d’obtenir un salaire plus élevé. En effet, les personnes plus diplômées gagnent généralement davantage, mais cela ne signifie pas nécessairement que les études sont à l’origine de cette différence. D’autres facteurs, comme les capacités individuelles ou le milieu familial, peuvent également influencer les salaires.</li>
+</ul>
+<p>Angrist &amp; Krueger utilisent le <strong>trimestre de naissance</strong> comme instrument : les lois sur la scolarité obligatoire fixent un âge de sortie, donc les élèves nés au début de l’année finissent l’école obligatoire avec légèrement moins d’années de scolarité que ceux nés en fin d’année — une variation <em>quasi aléatoire</em> de la scolarité, non corrélée à la capacité.</p>
+<ul>
 <li><p>Acemoglu, Johnson &amp; Robinson utilisent la <strong>mortalité des colons européens</strong> comme instrument des institutions actuelles : là où les colons mouraient beaucoup (climat, maladies), ils mettaient en place des institutions extractives plutôt que des institutions protégeant les droits de propriété — un exemple classique d’IV en macro/développement.</p></li>
-<li><p>Angrist &amp; Lavy exploitent la <strong>règle de Maïmonide</strong> (limite légale de 40 élèves par classe en Israël) : une classe de 41 élèves est scindée en deux classes de ~20, créant des discontinuités quasi expérimentales dans la taille de classe — l’exemple canonique de <em>regression discontinuity design</em> (RDD).</p></li>
+<li><p>Quartier: Les chercheurs cherchent à déterminer si le quartier dans lequel un enfant grandit influence ses revenus futurs. En effet, les enfants qui grandissent dans des quartiers plus favorisés ont généralement de meilleures perspectives économiques, mais cela peut aussi s’expliquer par les caractéristiques de leurs familles.</p></li>
+</ul>
+<p>L’objectif est donc d’identifier l’effet causal du quartier sur les revenus futurs des enfants, en étudiant notamment les familles qui déménagent et l’âge auquel leurs enfants changent de quartier.</p>
+<ul>
+<li>Angrist &amp; Lavy exploitent la <strong>règle de Maïmonide</strong> (limite légale de 40 élèves par classe en Israël) : une classe de 41 élèves est scindée en deux classes de ~20, créant des discontinuités quasi expérimentales dans la taille de classe — l’exemple canonique de <em>regression discontinuity design</em> (RDD).</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
