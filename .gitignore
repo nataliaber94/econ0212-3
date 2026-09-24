@@ -12,7 +12,6 @@
 **/*_cache/
 
 # Chapters not yet ready to publish
-/2-rls/
 /3-causalite/
 /4-rlm/
 /5-rlm-hypotheses/
@@ -27,3 +26,4 @@
 /1-analyse-donnees/exercice/1-analyse-de-donnees.do
 /1-analyse-donnees/exercice/1-analyse-de-donnees_nb.do
 /1-analyse-donnees/exercice/*.stswp
+/2-rls/exercices/2-regression-univariee.do
