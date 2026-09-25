@@ -238,7 +238,7 @@ Natalia Bermúdez
 <h3 id="wooclap">Wooclap</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_663e0ddf" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_93afef0a" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <div class="center">
@@ -293,7 +293,7 @@ Natalia Bermúdez
 <h2>Exercice 1 : découvrir les données</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_677fabb6" minutes="7" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_9ff5ab32" minutes="7" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -597,8 +597,11 @@ Natalia Bermúdez
 </div>
 <div class="fragment">
 <ul>
-<li>Les <em>données réelles</em> peuvent donc être écrites comme <strong>prédiction + résidu</strong> : ::: {.center} <span class="math display">y_i = \widehat y_i + \hat{e}_i = b_0 + b_1 x_i + \hat{e}_i</span> :::</li>
+<li>Les <em>données réelles</em> peuvent donc être écrites comme <strong>prédiction + résidu</strong> :</li>
 </ul>
+<div class="center">
+<p><span class="math display">y_i = \widehat y_i + \hat{e}_i = b_0 + b_1 x_i + \hat{e}_i</span></p>
+</div>
 <aside class="notes">
 <p>Le résidu est l’écart vertical entre le point observé et la droite. Il est positif lorsque le point se trouve au-dessus de la droite et négatif lorsqu’il se trouve en dessous.</p>
 <p>Il ne faut pas confondre le résidu <span class="math inline">\hat{e}_i</span>, calculé à partir d’une droite ajustée, avec le terme d’erreur <span class="math inline">e_i</span> du modèle de population. Ce dernier représente les autres facteurs qui affectent <span class="math inline">y</span> et sera introduit ultérieurement.</p>
@@ -865,7 +868,7 @@ Comment choisir la droite qui représente le mieux nos données ? Quel critère 
 ::: {.cell-output-display}
 
 ```{=html}
-<countdown-timer class="countdown" id="timer_cb912de6" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_d29dd9e6" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 ```
 
 :::
@@ -1162,7 +1165,7 @@ E(e \mid \textrm{diplômé d'un master})
 </ul>
 <div class="fragment">
 <div class="formula-box">
-<p>H1-H4 garantisent que les estimateurs (<span class="math inline">b_0</span>, <span class="math inline">b_1</span>) ont des propriétés statistiques <strong>satisfaisantes</strong> (existence et calcul du MCO).</p>
+<p>H1-H4 garantissent que les estimateurs (<span class="math inline">b_0</span>, <span class="math inline">b_1</span>) ont des propriétés statistiques <strong>satisfaisantes</strong> (existence et calcul du MCO).</p>
 </div>
 <aside class="notes">
 <p>Par « propriétés statistiques satisfaisantes », on entend que les estimateurs MCO ont des propriétés souhaitables lorsqu’on considère des échantillons répétés.</p>
@@ -1195,14 +1198,14 @@ E(b_0)=\beta_0, \qquad E(b_1)=\beta_1.
 </div>
 </div>
 <div class="fragment">
-<p><strong>Link with statistical properties:</strong></p>
+<p><strong>Lien avec les propriétés statistiques :</strong></p>
 <ul>
 <li><p><strong>Sans biais</strong> (<span class="math inline">\mathbb{E}(b_0)=\beta_0</span>, <span class="math inline">\mathbb{E}(b_1)=\beta_1</span>) : déjà garanti par [H1]-[H4].</p></li>
-<li><p><strong>Efficace</strong> (variance <strong>minimale</strong> parmi tous les estimateurs linéaires non biaisés) : nécessite en plus [ H5].</p></li>
+<li><p><strong>Efficace</strong> (variance <strong>minimale</strong> parmi tous les estimateurs linéaires non biaisés) : nécessite en plus [H5].</p></li>
 <li><p><em>À suivre au chapitre 5</em> …</p></li>
 </ul>
 <aside class="notes">
-<p>On ne détaille pas encore [H5] ici, seulement son rôle dans le théorème de Gauss-Markov. La définition formel le, les exemples de quand l’hypothèse est peu plausible, et les conséquences de l’hétéroscédasticité seront v us au chapitre 5.</p>
+<p>On ne détaille pas encore [H5] ici, seulement son rôle dans le théorème de Gauss-Markov. La définition formelle, les exemples de quand l’hypothèse est peu plausible, et les conséquences de l’hétéroscédasticité seront vus au chapitre 5.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1287,7 +1290,7 @@ E(b_0)=\beta_0, \qquad E(b_1)=\beta_1.
 <h2>Exercice 2 : régression par MCO</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_ffd45c4c" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_558dcb6a" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <p>Après avoir agrégé les données au niveau de la taille de la classe avec le code suivant :</p>
@@ -1482,7 +1485,7 @@ b_1\sum_i x_i\hat e_i
 <h2>Exercice 3 : <span class="math inline">R^2</span> et qualité d’ajustement</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_9cce9159" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_54b24856" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
