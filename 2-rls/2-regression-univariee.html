@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="2-regression-univariee_files/libs/revealjs/dist/theme/quarto-19745dda9f5001042433f4cece23b1f9.css">
+  <link rel="stylesheet" href="2-regression-univariee_files/libs/revealjs/dist/theme/quarto-40fc058b3396d377ac04dc57a5ebce1b.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -238,7 +238,7 @@ Natalia Bermúdez
 <h3 id="wooclap">Wooclap</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_93afef0a" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_fc01cdc3" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <div class="center">
@@ -275,6 +275,7 @@ Natalia Bermúdez
 <li>La <strong>réduction de la taille des classes</strong> est au cœur des débats politiques depuis des <em>décennies</em>.</li>
 <li>Des classes plus petites pourraient permettre aux enseignants de consacrer davantage de temps à chaque élève, mais leur mise en place est coûteuse.</li>
 </ul>
+<div class="fragment">
 <h3 id="application-données-dun-célèbre-article-de-joshua-angrist-et-victor-lavy-1999">Application : données d’un célèbre article de <a href="https://academic.oup.com/qje/article/114/2/533/1844228">Joshua Angrist et Victor Lavy (1999)</a></h3>
 <ul>
 <li><p>Obtenues du cours de <a href="https://opportunityinsights.org/course/">Raj Chetty et Greg Bruich</a></p></li>
@@ -288,12 +289,13 @@ Natalia Bermúdez
 <li>Caractéristiques des classes/écoles.</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="exercice-1-découvrir-les-données" class="slide level2 smaller scrollable">
 <h2>Exercice 1 : découvrir les données</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_9ff5ab32" minutes="7" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_d88b75bb" minutes="7" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -846,10 +848,8 @@ Comment choisir la droite qui représente le mieux nos données ? Quel critère 
 </div>
 <div class="fragment">
 <ul>
-<li>Les <strong>unités</strong> de <span class="math inline">x</span> ont de l’importance pour l’interprétation (et la magnitude !) de <span class="math inline">b_1</span>.
-<ul>
-<li>Vous devez être explicite sur l’<strong>unité de <span class="math inline">x</span></strong>.</li>
-</ul></li>
+<li>Les <strong>unités</strong> de <span class="math inline">x</span> sont importantes pour l’interprétation de <span class="math inline">b_1</span> : elles affectent sa magnitude, mais pas son signe.</li>
+<li>Il faut donc toujours être explicite sur <strong>l’unité de mesure de <span class="math inline">x</span></strong>.</li>
 </ul>
 </div>
 </section>
@@ -868,7 +868,7 @@ Comment choisir la droite qui représente le mieux nos données ? Quel critère 
 ::: {.cell-output-display}
 
 ```{=html}
-<countdown-timer class="countdown" id="timer_d29dd9e6" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_373f87a7" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 ```
 
 :::
@@ -1290,7 +1290,7 @@ E(b_0)=\beta_0, \qquad E(b_1)=\beta_1.
 <h2>Exercice 2 : régression par MCO</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_558dcb6a" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_6628a101" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <p>Après avoir agrégé les données au niveau de la taille de la classe avec le code suivant :</p>
@@ -1311,8 +1311,8 @@ E(b_0)=\beta_0, \qquad E(b_1)=\beta_1.
 <li>Introduction II : formalisation modèle de régression linéaire simple</li>
 <li>Estimation par moindres carrés ordinaires (MCO)</li>
 <li>Le modèle de régression linéaire simple (et hypothèses)</li>
-<li><span class="current">Estimation en Stata</span></li>
-<li>Propriétés algébriques de l’estimateur des MCO</li>
+<li>Estimation en Stata</li>
+<li><span class="current">Propriétés algébriques de l’estimateur des MCO</span></li>
 </ol>
 </section>
 
@@ -1485,7 +1485,7 @@ b_1\sum_i x_i\hat e_i
 <h2>Exercice 3 : <span class="math inline">R^2</span> et qualité d’ajustement</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_54b24856" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_5a031f39" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
