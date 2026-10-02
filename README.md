@@ -11,7 +11,7 @@ Site du cours : [bermudeznatalia.com/econ0212-3](https://bermudeznatalia.com/eco
 | 1 (23-09) | 0 | Introduction | [HTML](https://bermudeznatalia.com/econ0212-3/0-intro/intro.html) · [PDF](https://bermudeznatalia.com/econ0212-3/0-intro/intro.pdf) |
 | 1 (23-09) | 1 | Analyse de données | [HTML](https://bermudeznatalia.com/econ0212-3/1-analyse-donnees/1-analyse-de-donnees.html) · [PDF](https://bermudeznatalia.com/econ0212-3/1-analyse-donnees/1-analyse-de-donnees.pdf) |
 | 2 (30-09) | 2 | Régression linéaire simple | [HTML](https://bermudeznatalia.com/econ0212-3/2-rls/2-regression-univariee.html) · [PDF](https://bermudeznatalia.com/econ0212-3/2-rls/2-regression-univariee.pdf) |
-| 3 (07-10) | 3 | Causalité | à venir |
+| 3 (07-10) | 3 | Causalité | [HTML](https://bermudeznatalia.com/econ0212-3/3-causalite/3-causalite_shorter.html) · [PDF](https://bermudeznatalia.com/econ0212-3/3-causalite/3-causalite_shorter.pdf) |
 | 4 (14-10) | 4 | Régression linéaire multiple (RLM) | à venir |
 | 5 (18-11) | 5 | Hypothèses du modèle de RLM | à venir |
 | 6 (25-11) | 6 | Regressions: Extensions de la RLM | à venir |

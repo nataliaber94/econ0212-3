@@ -12,7 +12,16 @@
 **/*_cache/
 
 # Chapters not yet ready to publish
-/3-causalite/
+# Chapter 3: only the shorter deck is published (sources, long version and exercise files stay local)
+/3-causalite/*
+!/3-causalite/3-causalite_shorter.html
+!/3-causalite/3-causalite_shorter.pdf
+!/3-causalite/3-causalite_shorter_files/
+!/3-causalite/img/
+/3-causalite/img/*
+!/3-causalite/img/star-b0.png
+!/3-causalite/img/star-delta.png
+!/3-causalite/img/star-reg-k-math-small.png
 /4-rlm/
 /5-rlm-hypotheses/
 /6-rlm-extensions/
