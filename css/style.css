@@ -144,3 +144,18 @@ footer a { color: var(--accent); }
   }
   .badge { background: #3a2326; }
 }
+<style>
+/* Keep the table visible even before its fragment is activated */
+.reveal .fragment.reveal-cols {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Initially hide columns 5 and 6 */
+.reveal .fragment.reveal-cols:not(.visible) th:nth-child(5),
+.reveal .fragment.reveal-cols:not(.visible) th:nth-child(6),
+.reveal .fragment.reveal-cols:not(.visible) td:nth-child(5),
+.reveal .fragment.reveal-cols:not(.visible) td:nth-child(6) {
+  visibility: hidden;
+}
+</style>
