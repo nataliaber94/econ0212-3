@@ -839,7 +839,7 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 <h2>Exercice 1 : pourquoi randomiser ?</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_3ed9ff23" minutes="15" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_00709133" minutes="15" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <div style="font-size: 0.72em;">
@@ -962,91 +962,18 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 </ul>
 <div class="fragment">
 <ul>
-<li><p>11 600 élèves et leurs enseignants ont été <strong>assignés au hasard</strong> à l’un de ces trois groupes, de la maternelle au CE1 :</p>
+<li><p>11 600 élèves et leurs enseignants ont été <strong>assignés au hasard</strong> à l’un de ces groupes:</p>
 <ol type="1">
 <li><strong>Petite classe</strong> (groupe traité): 13 à 17 élèves par enseignant,</li>
 <li><strong>Classe normale</strong> (groupe de contrôle) : 22 à 25 élèves,</li>
-<li><strong>Classe normale avec aide</strong> (groupe traité) : 22 à 25 élèves, avec un enseignant à temps plein en tant qu’<strong>assistant</strong>.</li>
 </ol></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
 <li>La randomisation des classes a eu lieu <strong>au sein des écoles</strong>.</li>
-<li>Les compétences en mathématiques et en lecture ont été testées chaque année, vers le mois de mars.</li>
+<li>Les compétences en mathématiques et en lecture ont été testées.</li>
 </ul>
-</div>
-</section>
-<section id="exercice-2-données-star" class="slide level2 smaller scrollable">
-<h2>Exercice 2 : données STAR</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_0308df45" minutes="10" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
-</div>
-</div>
-<ol type="1">
-<li><p>Importer les données <code>star_data.dta</code> (<code>use "star_data.dta", replace</code>).</p>
-<ul>
-<li><a href="https://rdrr.io/cran/AER/man/STAR.html">Cette documentation</a> explique les variables (les données ont été <em>reformatées</em> : ne pas tenir compte des « k », « 1 », etc. dans les noms de variables).</li>
-</ul></li>
-<li><p>Quelle est l’unité d’observation ? Quelle variable contient : (i) l’affectation (aléatoire) de classe, (ii) le niveau scolaire de l’élève, (iii) la variable d’intérêt ?</p></li>
-<li><p>Combien y a-t-il d’observations ? Pourquoi autant, si 11 598 élèves ont participé ? Pourquoi y a-t-il tant de valeurs manquantes ? À quoi correspondent-elles ?</p></li>
-<li><p>Ne gardez que les observations pour lesquelles <code>read</code>, <code>math</code>, <code>ladder</code> et <code>tethnicity</code> ne sont pas manquants.</p></li>
-<li><p>Vérifions que la randomisation a bien été faite, en construisant une table de <strong>balancing checks</strong> : calculez, par groupe de niveau et de traitement, les pourcentages de filles, d’afro-américains, et de bénéficiaires de repas gratuits (<em>free lunch</em>).</p></li>
-</ol>
-<aside class="notes">
-<p>Étape 4 : filtrer aussi sur <code>ladder</code> et <code>tethnicity</code> (et pas seulement <code>read</code>/<code>math</code>) élimine également l’attrition côté enseignant, et reproduit exactement les 3 363 observations utilisées dans les captures d’écran Stata qui suivent.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="exercice-2-le-projet-dexpérimentation-star" class="slide level2 smaller">
-<h2>Exercice 2 : Le projet d’expérimentation STAR</h2>
-<p>Nous venons de voir que, dans une RCT, l’effet moyen du traitement (ATE) s’obtient en calculant la différence de résultats entre groupe de traitement et groupe de contrôle.</p>
-<p>Concentrons-nous sur :</p>
-<ul>
-<li>un groupe de traitement : <strong>petites classes</strong>,</li>
-<li>un groupe de contrôle : <strong>classes normales</strong>,</li>
-<li>une classe : <strong>maternelle</strong> (k).</li>
-</ul>
-<div class="fragment">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">test</th>
-<th style="text-align: right;">moyenne (classe normale)</th>
-<th style="text-align: right;">moyenne (petite classe)</th>
-<th style="text-align: right;">ATE</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">math</td>
-<td style="text-align: right;">484.41</td>
-<td style="text-align: right;">493.34</td>
-<td style="text-align: right;">8.93</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">read</td>
-<td style="text-align: right;">435.76</td>
-<td style="text-align: right;">441.15</td>
-<td style="text-align: right;">5.39</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Quelle est l’interprétation de ces ATE ?</p>
 </div>
 </section>
 <section id="rct-sous-forme-de-régression" class="slide level2 smaller">
@@ -1092,35 +1019,6 @@ Y_i = \underbrace{\mathbb{E}[Y_i^0]}_{b_0} + \delta D_i + \underbrace{Y_i^0 - \m
 <p><span class="math inline">\delta = 493{,}3367 - 484{,}4145 = 8{,}9222</span></p>
 </div>
 </section>
-<section id="régression-avec-une-variable-binaire-formellement" class="slide level2 smaller">
-<h2>Régression avec une variable binaire : formellement</h2>
-<p>Rappel du modèle : <span class="math inline">\text{score en math}_i = b_0 + \delta \, \text{small}_i + e_i</span></p>
-<p><span class="math display">
-\begin{aligned}
-\mathbb{E}[\textrm{score} \mid \text{small}_i = 0] &amp;= \mathbb{E}[b_0 + \delta \, \text{small}_i + e_i \mid \text{small}_i = 0] \\
-&amp;= b_0 + \delta \, \mathbb{E}[\text{small}_i \mid \text{small}_i = 0] + \mathbb{E}[e_i \mid \text{small}_i = 0] = b_0
-\end{aligned}
-</span></p>
-<div class="fragment">
-<p><span class="math display">
-\begin{aligned}
-\mathbb{E}[\textrm{score} \mid \text{small}_i = 1] &amp;= \mathbb{E}[b_0 + \delta \, \text{small}_i + e_i \mid \text{small}_i = 1] \\
-&amp;= b_0 + \delta \, \mathbb{E}[\text{small}_i \mid \text{small}_i = 1] + \mathbb{E}[e_i \mid \text{small}_i = 1] = b_0 + \delta
-\end{aligned}
-</span></p>
-</div>
-<div class="fragment">
-<p><span class="math display">
-\begin{aligned}
-ATE &amp;= \mathbb{E}[\textrm{score} \mid \text{small}_i = 1] - \mathbb{E}[\textrm{score} \mid \text{small}_i = 0] \\
-&amp;= b_0 + \delta - b_0 = \delta
-\end{aligned}
-</span></p>
-</div>
-<div class="fragment">
-<p>On le savait déjà, mais on comprend maintenant <em>pourquoi</em> c’est vrai ✌️.</p>
-</div>
-</section>
 <section id="limites-des-expérimentations-aléatoires" class="slide level2 smaller">
 <h2>Limites des expérimentations aléatoires</h2>
 <p>Les RCT ont une forte <strong><em>validité interne</em></strong>, c’est-à-dire qu’elles permettent d’établir le lien causal de manière très convaincante.</p>
@@ -1144,11 +1042,11 @@ ATE &amp;= \mathbb{E}[\textrm{score} \mid \text{small}_i = 1] - \mathbb{E}[\text
 </ul>
 </div>
 </section>
-<section id="exercice-4" class="slide level2 smaller scrollable">
-<h2>Exercice 4</h2>
+<section id="exercice-2" class="slide level2 smaller scrollable">
+<h2>Exercice 2</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_8293d9a6" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_7d537015" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -1260,7 +1158,108 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 \underbrace{0{,}1}_{SDR} \approx \underbrace{0{,}7}_{ATE} + \underbrace{(3{,}71 - 6{,}33)}_{\text{biais de sélection}} + \underbrace{0{,}3 \times (2{,}71 - (-4))}_{\text{effet hétérogène}}
 </span></p>
 <p><a href="#/naive-comp"><em>retour</em></a></p>
+</section>
+<section id="exercice-3-données-star" class="slide level2 smaller scrollable">
+<h2>Exercice 3 : données STAR</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<countdown-timer class="countdown" id="timer_4787b034" minutes="10" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+</div>
+</div>
+<ol type="1">
+<li><p>Importer les données <code>star_data.dta</code> (<code>use "star_data.dta", replace</code>).</p>
+<ul>
+<li><a href="https://rdrr.io/cran/AER/man/STAR.html">Cette documentation</a> explique les variables (les données ont été <em>reformatées</em> : ne pas tenir compte des « k », « 1 », etc. dans les noms de variables).</li>
+</ul></li>
+<li><p>Quelle est l’unité d’observation ? Quelle variable contient : (i) l’affectation (aléatoire) de classe, (ii) le niveau scolaire de l’élève, (iii) la variable d’intérêt ?</p></li>
+<li><p>Combien y a-t-il d’observations ? Pourquoi autant, si 11 598 élèves ont participé ? Pourquoi y a-t-il tant de valeurs manquantes ? À quoi correspondent-elles ?</p></li>
+<li><p>Ne gardez que les observations pour lesquelles <code>read</code>, <code>math</code>, <code>ladder</code> et <code>tethnicity</code> ne sont pas manquants.</p></li>
+<li><p>Vérifions que la randomisation a bien été faite, en construisant une table de <strong>balancing checks</strong> : calculez, par groupe de niveau et de traitement, les pourcentages de filles, d’afro-américains, et de bénéficiaires de repas gratuits (<em>free lunch</em>).</p></li>
+</ol>
+<aside class="notes">
+<p>Étape 4 : filtrer aussi sur <code>ladder</code> et <code>tethnicity</code> (et pas seulement <code>read</code>/<code>math</code>) élimine également l’attrition côté enseignant, et reproduit exactement les 3 363 observations utilisées dans les captures d’écran Stata qui suivent.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercice-3-le-projet-dexpérimentation-star" class="slide level2 smaller">
+<h2>Exercice 3 : Le projet d’expérimentation STAR</h2>
+<p>Nous venons de voir que, dans une RCT, l’effet moyen du traitement (ATE) s’obtient en calculant la différence de résultats entre groupe de traitement et groupe de contrôle.</p>
+<p>Concentrons-nous sur :</p>
+<ul>
+<li>un groupe de traitement : <strong>petites classes</strong>,</li>
+<li>un groupe de contrôle : <strong>classes normales</strong>,</li>
+<li>une classe : <strong>maternelle</strong> (k).</li>
+</ul>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">test</th>
+<th style="text-align: right;">moyenne (classe normale)</th>
+<th style="text-align: right;">moyenne (petite classe)</th>
+<th style="text-align: right;">ATE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">math</td>
+<td style="text-align: right;">484.41</td>
+<td style="text-align: right;">493.34</td>
+<td style="text-align: right;">8.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">read</td>
+<td style="text-align: right;">435.76</td>
+<td style="text-align: right;">441.15</td>
+<td style="text-align: right;">5.39</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Quelle est l’interprétation de ces ATE ?</p>
+</div>
+</section>
+<section id="régression-avec-une-variable-binaire-formellement" class="slide level2 smaller">
+<h2>Régression avec une variable binaire : formellement</h2>
+<p>Rappel du modèle : <span class="math inline">\text{score en math}_i = b_0 + \delta \, \text{small}_i + e_i</span></p>
+<p><span class="math display">
+\begin{aligned}
+\mathbb{E}[\textrm{score} \mid \text{small}_i = 0] &amp;= \mathbb{E}[b_0 + \delta \, \text{small}_i + e_i \mid \text{small}_i = 0] \\
+&amp;= b_0 + \delta \, \mathbb{E}[\text{small}_i \mid \text{small}_i = 0] + \mathbb{E}[e_i \mid \text{small}_i = 0] = b_0
+\end{aligned}
+</span></p>
+<div class="fragment">
+<p><span class="math display">
+\begin{aligned}
+\mathbb{E}[\textrm{score} \mid \text{small}_i = 1] &amp;= \mathbb{E}[b_0 + \delta \, \text{small}_i + e_i \mid \text{small}_i = 1] \\
+&amp;= b_0 + \delta \, \mathbb{E}[\text{small}_i \mid \text{small}_i = 1] + \mathbb{E}[e_i \mid \text{small}_i = 1] = b_0 + \delta
+\end{aligned}
+</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">
+\begin{aligned}
+ATE &amp;= \mathbb{E}[\textrm{score} \mid \text{small}_i = 1] - \mathbb{E}[\textrm{score} \mid \text{small}_i = 0] \\
+&amp;= b_0 + \delta - b_0 = \delta
+\end{aligned}
+</span></p>
+</div>
+<div class="fragment">
+<p>On le savait déjà, mais on comprend maintenant <em>pourquoi</em> c’est vrai ✌️.</p>
 
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
