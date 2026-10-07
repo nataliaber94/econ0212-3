@@ -145,6 +145,34 @@
   </style>
   <link href="3-causalite_shorter_files/libs/countdown-0.6.0/countdown.css" rel="stylesheet">
   <script src="3-causalite_shorter_files/libs/countdown-0.6.0/countdown.js"></script>
+  <style>
+  /* Hide columns 5 and 6 of the table until the trigger is activated */
+  .reveal-cols-table th:nth-child(5),
+  .reveal-cols-table th:nth-child(6),
+  .reveal-cols-table td:nth-child(5),
+  .reveal-cols-table td:nth-child(6) {
+    visibility: hidden;
+  }
+
+  /* Reveal columns 5 and 6 after the trigger is activated */
+  .columns:has(.column-trigger.visible)
+  .reveal-cols-table th:nth-child(5),
+  .columns:has(.column-trigger.visible)
+  .reveal-cols-table th:nth-child(6),
+  .columns:has(.column-trigger.visible)
+  .reveal-cols-table td:nth-child(5),
+  .columns:has(.column-trigger.visible)
+  .reveal-cols-table td:nth-child(6) {
+    visibility: visible;
+  }
+
+  /* Invisible trigger */
+  .column-trigger {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  </style>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -166,39 +194,6 @@ Natalia Bermúdez
 </div>
 
   <p class="date">October 2026</p>
-</section>
-<section class="slide level2">
-
-<style>
-
-
-.reveal-cols-table th:nth-child(5),
-.reveal-cols-table th:nth-child(6),
-.reveal-cols-table td:nth-child(5),
-.reveal-cols-table td:nth-child(6) {
-  visibility: hidden;
-}
-
-/* Reveal columns 5 and 6 after the trigger is activated */
-.columns:has(.column-trigger.visible)
-.reveal-cols-table th:nth-child(5),
-.columns:has(.column-trigger.visible)
-.reveal-cols-table th:nth-child(6),
-.columns:has(.column-trigger.visible)
-.reveal-cols-table td:nth-child(5),
-.columns:has(.column-trigger.visible)
-.reveal-cols-table td:nth-child(6) {
-  visibility: visible;
-}
-
-/* Invisible trigger */
-.column-trigger {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-
-</style>
 </section>
 <section id="aujourdhui-introduction-à-linférence-causale" class="slide level2">
 <h2>Aujourd’hui — introduction à l’inférence causale</h2>
@@ -839,7 +834,7 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 <h2>Exercice 1 : pourquoi randomiser ?</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_1f59f3f5" minutes="15" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_d1acb153" minutes="15" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <div style="font-size: 0.72em;">
@@ -1046,7 +1041,7 @@ Y_i = \underbrace{\mathbb{E}[Y_i^0]}_{b_0} + \delta D_i + \underbrace{Y_i^0 - \m
 <h2>Exercice 2</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_8520b9da" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_c4d89b3b" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -1163,7 +1158,7 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 <h2>Exercice 3 : données STAR</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_5c226228" minutes="10" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_2a763625" minutes="10" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
