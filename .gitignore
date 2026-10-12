@@ -22,7 +22,18 @@
 !/3-causalite/img/star-b0.png
 !/3-causalite/img/star-delta.png
 !/3-causalite/img/star-reg-k-math-small.png
-/4-rlm/
+# Chapter 4: only the shorter deck is published (sources, long version and exercise files stay local)
+/4-rlm/*
+!/4-rlm/4-regression-multivariee_shorter.html
+!/4-rlm/4-regression-multivariee_shorter.pdf
+!/4-rlm/4-regression-multivariee_shorter_files/
+!/4-rlm/img/
+/4-rlm/img/*
+!/4-rlm/img/reg-mlr-1-small.png
+!/4-rlm/img/reg-mlr-2-small-white.png
+!/4-rlm/img/reg-mlr-3-small.png
+!/4-rlm/img/reg-slr-1-small.png
+!/4-rlm/img/resultat-star.png
 /5-rlm-hypotheses/
 /6-rlm-extensions/
 /7-ci_hyptest/
