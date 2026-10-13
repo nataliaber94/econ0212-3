@@ -808,12 +808,27 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 </div>
 </div>
 </section>
+<section id="plan-du-cours-3" class="title-slide slide level1 section-divider center scrollable">
+<h1>Plan du cours</h1>
+<ol type="1">
+<li>Corrélation versus causalité</li>
+<li>Réalisations potentielles et effet moyen du traitement</li>
+<li><span class="current">Le problème de l’inférence causale: solution ?</span></li>
+<li>Expérimentations aléatoires (RCT)</li>
+<li>Conclusion</li>
+</ol>
+</section>
+
 <section id="la-randomisation-résout-le-problème-de-linférence-causale" class="slide level2 smaller">
 <h2>La randomisation résout le problème de l’inférence causale !</h2>
 <ul>
 <li><strong>Expérimentation aléatoire</strong> : vous assignez les individus <strong>aléatoirement</strong> à un groupe de traitement et de contrôle.</li>
+</ul>
+<div class="fragment">
+<ul>
 <li>Dans ce cas, le traitement est <strong>indépendant</strong> des réalisations potentielles : <span class="math inline">(Y_i^1, Y_i^0) \perp D_i</span>.</li>
 </ul>
+</div>
 <div class="fragment">
 <ul>
 <li>Conséquences :
@@ -834,7 +849,7 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 <h2>Exercice 1 : pourquoi randomiser ?</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_d1acb153" minutes="15" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_f9293fce" minutes="15" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <div style="font-size: 0.72em;">
@@ -904,7 +919,7 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 <li>Le biais est-il important ? Pourquoi ou pourquoi pas ?</li>
 </ul>
 </section>
-<section id="plan-du-cours-3" class="title-slide slide level1 section-divider center scrollable">
+<section id="plan-du-cours-4" class="title-slide slide level1 section-divider center scrollable">
 <h1>Plan du cours</h1>
 <ol type="1">
 <li>Corrélation versus causalité</li>
@@ -957,7 +972,7 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 </ul>
 <div class="fragment">
 <ul>
-<li><p>11 600 élèves et leurs enseignants ont été <strong>assignés au hasard</strong> à l’un de ces groupes:</p>
+<li><p>11 600 <strong>élèves et leurs enseignants</strong> ont été <strong>assignés au hasard</strong> à l’un de ces groupes:</p>
 <ol type="1">
 <li><strong>Petite classe</strong> (groupe traité): 13 à 17 élèves par enseignant,</li>
 <li><strong>Classe normale</strong> (groupe de contrôle) : 22 à 25 élèves,</li>
@@ -971,8 +986,8 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 </ul>
 </div>
 </section>
-<section id="rct-sous-forme-de-régression" class="slide level2 smaller">
-<h2>RCT sous forme de régression</h2>
+<section id="leffet-du-traitement-sous-forme-de-régression" class="slide level2 smaller">
+<h2>L’effet du traitement sous forme de régression</h2>
 <p><span class="math display">Y_i = D_i Y_i^1 + (1-D_i) Y_i^0</span></p>
 <div class="fragment">
 <p>En développant et en regroupant, avec <span class="math inline">\delta_i = Y_i^1 - Y_i^0</span> :</p>
@@ -981,7 +996,7 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 <div class="fragment">
 <p>En supposant un effet constant, <span class="math inline">\delta_i = \delta</span> pour tout <span class="math inline">i</span>, puis en ajoutant <span class="math inline">\mathbb{E}[Y_i^0] - \mathbb{E}[Y_i^0] = 0</span> :</p>
 <p><span class="math display">
-Y_i = \underbrace{\mathbb{E}[Y_i^0]}_{b_0} + \delta D_i + \underbrace{Y_i^0 - \mathbb{E}[Y_i^0]}_{e_i}
+Y_i = \underbrace{\mathbb{E}[Y_i^0]}_{\beta_0} + \delta D_i + \underbrace{Y_i^0 - \mathbb{E}[Y_i^0]}_{e_i}
 </span></p>
 </div>
 <div class="fragment">
@@ -1005,13 +1020,12 @@ Y_i = \underbrace{\mathbb{E}[Y_i^0]}_{b_0} + \delta D_i + \underbrace{Y_i^0 - \m
 <p><img data-src="img/star-b0.png" style="width:95.0%"></p>
 </div>
 </div><div class="column" style="width:50%;">
-<p><span class="math inline">\delta = \mathbb{E}[Y_i \mid D_i = 1] - \mathbb{E}[Y_i \mid D_i = 0]</span></p>
 <div class="center">
-<p><img data-src="img/star-delta.png" style="width:95.0%"></p>
+<p><span class="math display"> \quad </span> <img data-src="img/star-delta.png" style="width:95.0%"></p>
 </div>
 </div></div>
 <div class="center">
-<p><span class="math inline">\delta = 493{,}3367 - 484{,}4145 = 8{,}9222</span></p>
+<p><span class="math display">\hat \delta = \mathbb{E}[Y_i \mid D_i = 1] - \mathbb{E}[Y_i \mid D_i = 0]</span> <span class="math display">\hat \delta = 493{,}3367 - 484{,}4145 = 8{,}9222</span></p>
 </div>
 </section>
 <section id="limites-des-expérimentations-aléatoires" class="slide level2 smaller">
@@ -1041,7 +1055,7 @@ Y_i = \underbrace{\mathbb{E}[Y_i^0]}_{b_0} + \delta D_i + \underbrace{Y_i^0 - \m
 <h2>Exercice 2</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_c4d89b3b" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_1741781a" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
@@ -1052,7 +1066,7 @@ Y_i = \underbrace{\mathbb{E}[Y_i^0]}_{b_0} + \delta D_i + \underbrace{Y_i^0 - \m
 <li><p>Comment interpréter les coefficients ?</p></li>
 </ol>
 </section>
-<section id="plan-du-cours-4" class="title-slide slide level1 section-divider center scrollable">
+<section id="plan-du-cours-5" class="title-slide slide level1 section-divider center scrollable">
 <h1>Plan du cours</h1>
 <ol type="1">
 <li>Corrélation versus causalité</li>
@@ -1070,7 +1084,7 @@ Y_i = \underbrace{\mathbb{E}[Y_i^0]}_{b_0} + \delta D_i + \underbrace{Y_i^0 - \m
 <div class="fragment">
 <p>Deux sources de sélection à traiter différemment :</p>
 <ul>
-<li><strong>caractéristiques observables</strong> : <u><em>régression multivariée</em> (prochain cours !)</u></li>
+<li><strong>caractéristiques observables</strong> : <u><em>régression multivariée</em> (prochain chapitre !)</u></li>
 <li><strong>caractéristiques non observables</strong> : <em>différences-de-différences</em> (<strong>à la fin de ce cours !</strong>) et <em>Regression Discontinuity Design</em> (<strong>en master en économie !</strong>)</li>
 </ul>
 </div>
@@ -1158,7 +1172,7 @@ SDR = ATE + \underbrace{\mathop{\mathbb{E}}(Y_i^0 \mid D_i = 1) - \mathop{\mathb
 <h2>Exercice 3 : données STAR</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_2a763625" minutes="10" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_64f4fcff" minutes="10" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <ol type="1">
