@@ -231,7 +231,7 @@ Natalia Bermúdez
     </div>
 </div>
 
-  <p class="date">October 2026</p>
+  <p class="date">November 2026</p>
 </section>
 <section id="aujourdhui-régression-linéaire-multiple" class="slide level2">
 <h2>Aujourd’hui — Régression Linéaire Multiple</h2>
@@ -240,7 +240,7 @@ Natalia Bermúdez
 <li>Plusieurs variables explicatives dans le modèle</li>
 <li>Le biais de variable omise</li>
 <li>Interprétation : variables quantitatives et variables indicatrices</li>
-<li>Le piège de la collinéarité parfaite</li>
+<li>Le piège de la colinéarité parfaite</li>
 <li>Le <span class="math inline">R^2</span> ajusté</li>
 </ul>
 <div class="fragment">
@@ -293,7 +293,7 @@ Natalia Bermúdez
 </div><div class="column" style="width:50%;">
 <p><code>regress avgmath classize</code></p>
 <p><img data-src="img/reg-slr-1-small.png" style="width:100.0%"></p>
-<p><span class="math display">\widehat{\text{score}}_i = 57.79 + \color{#5b2c74}{0.32}\times \text{taille}_i</span></p>
+<p><span class="math display">\widehat{\text{score}}_i = 57.79 + \textcolor{#5b2c74}{0.32}\times \text{taille}_i</span></p>
 </div></div>
 <aside class="notes">
 <p>Une classe avec un élève de plus est associée, en moyenne, à un score plus élevé de 0,32 point. Rappeler : chaque point est une classe (pas un élève). N = 2 019 classes.</p>
@@ -344,7 +344,7 @@ Natalia Bermúdez
 </section>
 <section id="un-facteur-confondant-lorigine-sociale-des-élèves" class="slide level2 smaller">
 <h2>Un facteur confondant : l’origine sociale des élèves</h2>
-<p>La localisation n’est pas observée, mais <code>disadvantaged</code> (<strong>% d’élèves issus de milieux défavorisés</strong>, plus élevé dans les régions pauvres) en mesure une dimension clé. Est-il lié <strong>à la fois</strong> à <span class="math inline">x</span> et à <span class="math inline">y</span> ?</p>
+<p>La localisation n’est pas observée, mais <code>disadvantaged</code> (<strong>% d’élèves issus de milieux défavorisés</strong>) en mesure une dimension clé. Est-il lié <strong>à la fois</strong> à <span class="math inline">x</span> et à <span class="math inline">y</span> ?</p>
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -415,7 +415,7 @@ Natalia Bermúdez
 
 <section id="le-modèle-de-régression-linéaire-multiple" class="slide level2 smaller">
 <h2>Le modèle de régression linéaire multiple</h2>
-<p><strong>Objectif</strong> : enrichir le modèle pour <u>prendre en compte les facteurs qui sont <strong>simultanément liés</strong></u><strong> à <span class="math inline">y_i</span> et à <span class="math inline">x_{i1}</span></strong>.</p>
+<p><strong>Objectif</strong> : enrichir le modèle pour <u>prendre en compte les facteurs qui sont <strong>simultanément liés à <span class="math inline">y_i</span> et à <span class="math inline">x_{i1}</span></strong></u>.</p>
 <div class="fragment">
 <p>Dans la <strong>population</strong>, on suppose la relation linéaire :</p>
 <div class="formula-box">
@@ -485,9 +485,9 @@ Natalia Bermúdez
 <div class="fragment">
 <p><strong>Étape 2.</strong> L’estimateur MCO de <span class="math inline">\textcolor{red}{\beta_1}</span> dans la régression multiple est :</p>
 <div class="formula-box">
-<p><span class="math display">\textcolor{red}{b_1} = \frac{\sum_{i=1}^n \textcolor{#1a7a3d}{\hat r_{i1}}\, y_i}{\sum_{i=1}^n \textcolor{#1a7a3d}{\hat r_{i1}}^2}</span> </p>
+<p><span class="math display">\textcolor{red}{b_1} = \frac{\sum_{i=1}^n \textcolor{#1a7a3d}{\hat r_{i1}}\, y_i}{\sum_{i=1}^n \textcolor{#1a7a3d}{\hat r_{i1}}^2}</span></p>
 </div>
-<p><span class="math inline">\Rightarrow</span> <span class="math inline">\textcolor{red}{b_1}</span> est <strong>la pente de la régression simple de <span class="math inline">y_i</span> sur <span class="math inline">\textcolor{#1a7a3d}{\hat r_{i1}}</span></strong> : <span class="math display">\;y_i = \alpha_0 + \beta_1 \textcolor{#1a7a3d}{\hat r_{i1}} + v_i</span>.</p>
+<p><span class="math inline">\Rightarrow</span> <span class="math inline">\textcolor{red}{b_1}</span> est <strong>la pente de la régression simple de <span class="math inline">y_i</span> sur <span class="math inline">\textcolor{#1a7a3d}{\hat r_{i1}}</span></strong> : <span class="math display">y_i = \alpha_0 + \alpha_1 \textcolor{#1a7a3d}{\hat r_{i1}} + v_i \quad\Longrightarrow\quad \hat\alpha_1 = \textcolor{red}{b_1}</span></p>
 <aside class="notes">
 <p>Wooldridge, chap.&nbsp;3, interprétation « partialling out » (éq. 3.22) — vérifié : c’est correct. Points de notation à souligner : - <span class="math inline">x_{i1}</span> (observation <span class="math inline">i</span>, variable 1), pas <span class="math inline">x_{1i}</span>. - On écrit <span class="math inline">b_1</span> (l’estimateur), pas <span class="math inline">\beta_1</span>, dans la formule : <span class="math inline">\beta_1</span> est le paramètre de population. - La régression auxiliaire « <span class="math inline">y_i</span> sur <span class="math inline">\hat r_{i1}</span> » est une régression <em>d’échantillon</em> : on ne l’écrit pas avec <span class="math inline">\beta_0, \beta_1</span> du modèle. Sa pente vaut exactement <span class="math inline">b_1</span> ; sa constante vaut <span class="math inline">\bar y</span> (car <span class="math inline">\hat r_{i1}</span> est de moyenne nulle), pas <span class="math inline">b_0</span>. Vérifié sur nos données : régresser <code>avgmath</code> sur le résidu de <code>classize</code> après <code>disadvantaged</code> donne exactement 0,0717, comme la régression multiple. Intuition : on « nettoie » <span class="math inline">x_1</span> de tout ce qui est expliqué par <span class="math inline">x_2</span>, puis on regarde comment <span class="math inline">y</span> varie avec ce qui reste.</p>
 <style type="text/css">
@@ -512,7 +512,7 @@ Natalia Bermúdez
 <p>où <span class="math inline">\hat r_{ij}</span> est le <u><strong>résidu de la régression de <span class="math inline">x_j</span> sur toutes les autres variables explicatives</strong> (et une constante)</u>.</p>
 <div class="fragment">
 <ul>
-<li><strong>Théorème de Frisch–Waugh–Lovell</strong> : <span class="math inline">\textcolor{red}{b_j}</span> mesure la relation entre <span class="math inline">y</span> et <span class="math inline">x_j</span> <strong>une fois que l’on a retiré (“<em>netting out</em>”) de <span class="math inline">x_j</span>, la variation expliquée par les autres variables</strong> du modèle.</li>
+<li><strong>Théorème de Frisch–Waugh–Lovell</strong> : <span class="math inline">\textcolor{red}{b_j}</span> mesure la relation entre <span class="math inline">y</span> et <span class="math inline">x_j</span> <strong>une fois que l’on a retiré de <span class="math inline">x_j</span> la variation expliquée par les autres variables</strong> du modèle (<em>partialling out</em>).</li>
 <li>C’est ce qui justifie l’interprétation « <strong>en maintenant les autres régresseurs constants</strong> », au sens statistique.</li>
 </ul>
 </div>
@@ -670,6 +670,31 @@ Natalia Bermúdez
 <p><span class="math inline">\rightarrow</span> Formalisons ce mécanisme : le <span style="color: red;"><em>biais de variable omise</em></span>.</p>
 </div>
 </section>
+<section id="pause" class="slide level2 center">
+<h2>Pause</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<countdown-timer class="countdown" id="timer_87c8d5b0" minutes="10" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+</div>
+</div>
+<div class="center">
+<p>☕ <strong>Pause de 10 minutes</strong></p>
+<p>On reprend avec le <strong>biais de variable omise</strong> : pourquoi <span class="math inline">b_1</span> est passé de 0.32 à 0.07.</p>
+</div>
+<aside class="notes">
+<p>Pause placée à mi-cours (environ 55 minutes) : la partie 1 (modèle, FWL, interprétation TCEPA, application) est terminée. Les exercices 1 et 2 (10 et 8 minutes) servent ensuite de pauses actives dans la deuxième heure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="plan-du-cours-1" class="title-slide slide level1 section-divider center scrollable">
 <h1>Plan du cours</h1>
 <ol type="1">
@@ -806,13 +831,13 @@ Natalia Bermúdez
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>(1) Régression simple</strong> (<span class="math inline">z</span> omise) :</p>
-<p><span class="math inline">\widehat{\text{score}} = 57.79 + \tilde b_1\,\text{taille}</span>, <span class="math display">\tilde b_1 = 0.317</span></p>
+<p><span class="math inline">\widehat{\text{score}} = 57.79 + \tilde b_1\,\text{taille}</span>, <span class="math display">\tilde b_1 = 0.3175</span></p>
 <p><strong>(2) Régression multiple</strong> :</p>
 <p><span class="math inline">\widehat{\text{score}} = 69.94 + b_1\,\text{taille} + \textcolor{#d90502}{b_2}\,\text{défav}</span></p>
-<p><span class="math display">b_1 = 0.072, \quad \color{#d90502}{b_2 = -0.340}</span></p>
+<p><span class="math display">b_1 = 0.0717, \quad \color{#d90502}{b_2 = -0.3396}</span></p>
 <p><strong>(3) Variable omise sur <span class="math inline">x</span></strong> :</p>
 <p><span class="math inline">\widehat{\text{défav}} = 35.78 + \textcolor{#DE9854}{\tilde\delta_1}\,\text{taille}</span></p>
-<p><span class="math display"> \textcolor{#DE9854}{\tilde\delta_1 = -0.724}</span></p>
+<p><span class="math display"> \textcolor{#DE9854}{\tilde\delta_1 = -0.7239}</span></p>
 </div><div class="column fragment" style="width:50%;">
 <p><strong>Interprétation du biais</strong> :</p>
 <ul>
@@ -821,12 +846,14 @@ Natalia Bermúdez
 <li><span class="math inline">\Rightarrow</span> biais <span class="math inline">= (-) \times (-) &gt; 0</span>.</li>
 </ul>
 <div class="formula-box">
-<p><span class="math display">\underbrace{0.317}_{\tilde b_1} = \underbrace{0.072}_{b_1} + \underbrace{(-0.340)}_{\color{#d90502}{b_2}} \times \underbrace{(-0.724)}_{\textcolor{#DE9854}{\tilde\delta_1}}</span></p>
+<p><span class="math display">\underbrace{0.3175}_{\tilde b_1} = \underbrace{0.0717}_{b_1} + \underbrace{(-0.3396)}_{\color{#d90502}{b_2}} \times \underbrace{(-0.7239)}_{\textcolor{#DE9854}{\tilde\delta_1}}</span></p>
 </div>
 <p>La régression simple <strong>surestimait</strong> l’association entre taille de la classe et score.</p>
-</div></div>
-<aside class="notes">
+</div><aside class="notes">
 <p>Dans l’échantillon, la relation <span class="math inline">\tilde b_1 = b_1 + b_2\,\tilde\delta_1</span> est une <strong>identité exacte</strong> (Wooldridge, chap.&nbsp;3, éq. 3.23), pas seulement une approximation : vérifié sur nos données, 0,0717 + (−0,3396)(−0,7239) = 0,3175. Lien avec l’inférence causale : même <span class="math inline">b_1 = 0.07</span> n’est pas forcément causal — d’autres variables omises (richesse de la commune, qualité des enseignants…) peuvent encore biaiser l’estimation. C’est pour cela qu’Angrist et Lavy utilisent la règle de Maïmonide (on y reviendra).</p>
+<ul>
+<li><span class="math inline">\Rightarrow</span> La régression simple attribue à la taille de la classe un effet qui vient de la <strong>composition sociale</strong> : les grandes classes ont de meilleurs scores surtout parce qu’elles ont <strong>moins d’élèves défavorisés</strong>.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -838,12 +865,13 @@ Natalia Bermúdez
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</div>
 </section>
 <section id="exercice-1" class="slide level2 smaller scrollable">
 <h2>Exercice 1</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_1c9b4278" minutes="10" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_c159488f" minutes="10" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <p>On utilise maintenant le score en <strong>lecture</strong> (<code>avgverb</code>) comme variable dépendante.</p>
@@ -911,7 +939,7 @@ Natalia Bermúdez
 <li><span class="math inline">b_0 + b_2</span> : score prédit dans une école <strong>religieuse</strong> avec une classe de 0 élève.</li>
 </ul>
 </div></div>
-<p><span class="math inline">\rightarrow</span> Le coefficient d’une indicatrice est une <strong>différence de moyennes</strong> par rapport à la <strong>catégorie de référence</strong> (<code>religious</code> = 0). Démonstrations : voir l’<a href="#/annexe-indicatrice-b0-b1"><strong>annexe</strong></a>.</p>
+<p><span class="math inline">\rightarrow</span> Le coefficient d’une indicatrice est une <strong>différence de score prédit</strong> par rapport à la <strong>catégorie de référence</strong> (<code>religious</code> = 0), <strong>à valeurs égales des autres régresseurs</strong>. Démonstrations : <a href="#/annexe-indicatrice-b0-b1"><strong>annexe</strong></a>.</p>
 <aside class="notes">
 <p>Wooldridge, chap.&nbsp;7 : le coefficient d’une variable binaire est un « décalage d’ordonnée à l’origine » (intercept shift) entre les deux groupes, à valeurs égales des autres régresseurs. Les démonstrations (espérances conditionnelles) sont en annexe à la fin du chapitre.</p>
 <style type="text/css">
@@ -952,9 +980,9 @@ Natalia Bermúdez
           display:block!important;
       }</style></aside>
 </section>
-<section id="pas-de-collinéarité-parfaite" class="slide level2 smaller">
-<h2>Pas de collinéarité parfaite</h2>
-<p><strong>Condition</strong> : aucun régresseur ne peut être une <strong>combinaison linéaire exacte</strong> des autres (ni de la constante). Sinon, les MCO ne peuvent pas séparer leurs effets.</p>
+<section id="pas-de-colinéarité-parfaite" class="slide level2 smaller">
+<h2>Pas de colinéarité parfaite</h2>
+<p><strong>Condition</strong> : aucun régresseur ne peut être une <strong>combinaison linéaire exacte</strong> des autres (ni de la constante). Sinon, les MCO ne peuvent pas séparer leurs effets. <em>(Elle généralise l’hypothèse H4 du chapitre 2 : <span class="math inline">x</span> ne doit pas être constant.)</em></p>
 <div class="fragment">
 <p><strong>Exemple : le piège des indicatrices.</strong> On crée <code>is_religious</code> et <code>is_notreligious</code> et on les met <strong>toutes les deux</strong> dans la régression :</p>
 <div class="columns">
@@ -965,11 +993,11 @@ Natalia Bermúdez
 <p><img data-src="img/reg-mlr-3-small.png" style="width:85.0%"></p>
 </div><div class="column fragment" style="width:45%;">
 <p>Pour chaque école : <code>is_religious</code> + <code>is_notreligious</code> = <strong>1</strong> = la constante.</p>
-<p><span style="color: red;"><span class="math inline">\Rightarrow</span> collinéarité parfaite</span> : <code>Stata</code> <strong>supprime</strong> automatiquement une variable (<em>omitted</em>).</p>
+<p><span style="color: red;"><span class="math inline">\Rightarrow</span> colinéarité parfaite</span> : <code>Stata</code> <strong>supprime</strong> automatiquement une variable (<em>omitted</em>).</p>
 <p>⚠️ <strong>Règle</strong> : avec <span class="math inline">G</span> catégories, on inclut <strong><span class="math inline">G-1</span> indicatrices</strong>. La catégorie omise est la <strong>référence</strong> ; les coefficients se lisent par rapport à elle.</p>
 </div></div>
 <aside class="notes">
-<p>Wooldridge, chap.&nbsp;3 (hypothèse MLR.3 : pas de collinéarité parfaite) et chap.&nbsp;7 (« dummy variable trap »). Distinguer : collinéarité <em>parfaite</em> (relation exacte, l’estimation est impossible) vs.&nbsp;régresseurs <em>fortement corrélés</em> (l’estimation est possible mais imprécise — on y reviendra avec les écarts-types). Conséquence pratique : il faut au moins <span class="math inline">n \geq k+1</span> observations. Dans <code>Stata</code>, <code>i.school</code> crée automatiquement les indicatrices et omet une catégorie de référence ; <code>c.school</code> traite la variable comme continue (à éviter pour une variable catégorielle). Toujours vérifier quelle catégorie a été omise.</p>
+<p>Wooldridge, chap.&nbsp;3 (hypothèse MLR.3 : pas de colinéarité parfaite) et chap.&nbsp;7 (« dummy variable trap »). Distinguer : colinéarité <em>parfaite</em> (relation exacte, l’estimation est impossible) vs.&nbsp;régresseurs <em>fortement corrélés</em> (l’estimation est possible mais imprécise — on y reviendra avec les écarts-types). Conséquence pratique : il faut au moins <span class="math inline">n \geq k+1</span> observations. Dans <code>Stata</code>, <code>i.school</code> crée automatiquement les indicatrices et omet une catégorie de référence ; <code>c.school</code> traite la variable comme continue (à éviter pour une variable catégorielle). Toujours vérifier quelle catégorie a été omise.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -987,7 +1015,7 @@ Natalia Bermúdez
 <h2>Exercice 2 : le piège des indicatrices</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_74111cb8" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_57898556" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-color-border:#d90502;--countdown-color-text:black;--countdown-color-running-background:#d90502;--countdown-color-running-text:white;--countdown-color-finished-background:white;--countdown-color-finished-border:#d90502;--countdown-color-finished-text:#d90502;"></countdown-timer>
 </div>
 </div>
 <p>Données <code>star_data.dta</code> (chapitre 3). Supprimer les observations avec des valeurs manquantes.</p>
@@ -1082,7 +1110,7 @@ Natalia Bermúdez
 <li><p>Quel est le <span class="math inline">R^2</span> ajusté de cette dernière régression ? Comment l’interpréter ?</p></li>
 </ol>
 <aside class="notes">
-<p>Lien avec le chapitre 3 (question 3) : si l’assignation est vraiment aléatoire, la taille de la classe n’est pas corrélée avec les caractéristiques des élèves (<span class="math inline">\tilde\delta_1 \approx 0</span>), donc ajouter des contrôles ne devrait presque pas changer le coefficient de <code>star</code> — c’est la formule du biais de variable omise en action. Les solutions sont dans le do-file des TP (<code>exercices/5-regression-multivariee.do</code>).</p>
+<p>Lien avec le chapitre 3 (question 3) : si l’assignation est vraiment aléatoire, la taille de la classe n’est pas corrélée avec les caractéristiques des élèves (<span class="math inline">\tilde\delta_1 \approx 0</span>), donc ajouter des contrôles ne devrait presque pas changer le coefficient de <code>star</code> — c’est la formule du biais de variable omise en action. Les solutions sont dans le do-file <code>exercices/4-rlm-answers.do</code>.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1104,7 +1132,7 @@ Natalia Bermúdez
 <h2><a href="#/annexe">Annexe</a> Variable indicatrice : <span class="math inline">b_0</span> et <span class="math inline">b_1</span></h2>
 <p><span class="math display">\widehat{\text{score}} = b_0 + b_1\, \text{taille} + b_2\, \text{religieuse}</span></p>
 <p><strong>Constante.</strong> Pour une école non religieuse avec une classe de taille 0 : <span class="math display">\widehat{\text{score}}(\text{religieuse} = 0,\ \text{taille} = 0) = b_0 + b_1 \times 0 + b_2 \times 0 = b_0</span></p>
-<p><strong>Pente de la taille.</strong> À statut religieux <span class="math inline">R \in \{0,1\}</span> fixé, comparons une classe de taille <span class="math inline">n_1 + 1</span> et une classe de taille <span class="math inline">n_1</span> : <span class="math display">\widehat{\text{score}}(R,\ n_1 + 1) - \widehat{\text{score}}(R,\ n_1) = \big[b_0 + b_1 (n_1 + 1) + b_2 R\big] - \big[b_0 + b_1 n_1 + b_2 R\big] = b_1</span></p>
+<p><strong>Pente de la taille.</strong> À statut religieux <span class="math inline">R \in \{0,1\}</span> fixé, comparons une classe de taille <span class="math inline">T + 1</span> et une classe de taille <span class="math inline">T</span> : <span class="math display">\widehat{\text{score}}(R,\ T + 1) - \widehat{\text{score}}(R,\ T) = \big[b_0 + b_1 (T + 1) + b_2 R\big] - \big[b_0 + b_1 T + b_2 R\big] = b_1</span></p>
 <p><span class="math inline">\Rightarrow</span> <span class="math inline">b_1</span> = variation prédite du score associée à <strong>un élève de plus</strong>, à statut religieux constant (la même pour les deux types d’écoles).</p>
 <p><a href="#/indicatrice-interpretation">← Retour à la diapositive « Variable indicatrice : interprétation »</a></p>
 </section>
