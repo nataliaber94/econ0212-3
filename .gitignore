@@ -34,7 +34,16 @@
 !/4-rlm/img/reg-mlr-3-small.png
 !/4-rlm/img/reg-slr-1-small.png
 !/4-rlm/img/resultat-star.png
-/5-rlm-hypotheses/
+# Chapter 5: only the shorter deck is published (sources, long version and notes stay local)
+/5-rlm-hypotheses/*
+!/5-rlm-hypotheses/5-rlm-hypotheses_shorter.html
+!/5-rlm-hypotheses/5-rlm-hypotheses_shorter.pdf
+!/5-rlm-hypotheses/5-rlm-hypotheses_shorter_files/
+!/5-rlm-hypotheses/img/
+/5-rlm-hypotheses/img/*
+!/5-rlm-hypotheses/img/2.8-wooldridge.png
+!/5-rlm-hypotheses/img/2.9-wooldridge.png
+!/5-rlm-hypotheses/img/reg-robust.png
 /6-rlm-extensions/
 /7-ci_hyptest/
 /8-did/
